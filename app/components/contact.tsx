@@ -17,12 +17,13 @@ export function Contact() {
             id="contact-heading"
             className="mt-4 font-serif text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] font-medium tracking-[-0.02em] text-ink"
           >
-            Let&apos;s talk about your home.
+            Interested in the {siteConfig.targetRole} role at{" "}
+            {siteConfig.targetCompany}.
           </h2>
           <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-stone">
-            Open to residential design consultation, remodeling sales, and
-            opportunities where homeowner communication and project scoping
-            matter.
+            I&apos;d welcome a conversation with {siteConfig.targetContact.name},{" "}
+            {siteConfig.targetContact.title}, about joining your design team to
+            deliver upscale residential remodeling across Central Ohio.
           </p>
         </FadeIn>
 
@@ -30,7 +31,7 @@ export function Contact() {
           <div className="mt-14 flex flex-col gap-8 sm:flex-row sm:gap-16">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="group font-serif text-2xl text-ink transition-colors hover:text-clay md:text-3xl"
+              className="font-serif text-2xl text-ink transition-colors hover:text-clay md:text-3xl"
             >
               {siteConfig.email}
             </a>
@@ -42,7 +43,8 @@ export function Contact() {
             </a>
           </div>
           <p className="mt-10 font-sans text-sm text-stone">
-            {siteConfig.location}
+            {siteConfig.location} · Available for evening and weekend client
+            meetings
           </p>
         </FadeIn>
       </div>

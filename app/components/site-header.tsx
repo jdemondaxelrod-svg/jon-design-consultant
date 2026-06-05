@@ -1,8 +1,8 @@
 import { siteConfig } from "../lib/site";
 
 const navItems = [
-  { href: "#practice", label: "Practice" },
-  { href: "#ventures", label: "Ventures" },
+  { href: "#responsibilities", label: "Responsibilities" },
+  { href: "#experience", label: "Experience" },
   { href: "#background", label: "Background" },
   { href: "#contact", label: "Contact" },
 ];
@@ -32,10 +32,10 @@ export function SiteHeader() {
           ))}
         </nav>
         <a
-          href={`mailto:${siteConfig.email}`}
+          href={`tel:${siteConfig.phone}`}
           className="font-sans text-[0.65rem] tracking-[0.12em] text-white/80 uppercase transition-colors hover:text-white md:hidden"
         >
-          Email
+          Call
         </a>
       </div>
     </header>

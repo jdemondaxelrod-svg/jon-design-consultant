@@ -2,6 +2,7 @@ import { Background } from "./components/background";
 import { Contact } from "./components/contact";
 import { Hero } from "./components/hero";
 import { Practice } from "./components/practice";
+import { ProjectScope } from "./components/project-scope";
 import { ProofBar } from "./components/proof-bar";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
@@ -13,6 +14,7 @@ export default function Home() {
       <SiteHeader />
       <main>
         <Hero />
+        <ProjectScope />
         <ProofBar />
         <Practice />
         <Ventures />
