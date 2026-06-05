@@ -62,7 +62,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "Éliane Design",
     location: "Columbus, Ohio",
     title: "Founder",
-    period: "2026–Present",
+    period: periods.elianeDesign,
     intro:
       "Luxury accessibility and aging-in-place brand focused on integrating safety, mobility, and independence into beautiful residential environments.",
     bullets: [
@@ -76,7 +76,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "The Karole Foundation",
     location: "Columbus, Ohio",
     title: "Founder",
-    period: "2026–Present",
+    period: periods.karoleFoundation,
     intro:
       "Nonprofit initiative focused on accessibility, aging-in-place, and home safety.",
     bullets: [
@@ -89,7 +89,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "Soft Surroundings",
     location: "St. Louis, MO (Remote)",
     title: "Director of Product & Digital Experience",
-    period: "2022–2023",
+    period: periods.softSurroundings,
     intro:
       "Led customer experience and ecommerce initiatives for a national retail brand.",
     bullets: [
@@ -103,7 +103,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "The Scotts Miracle-Gro Company",
     location: "Marysville, OH",
     title: "Product Owner / Digital Experience Manager",
-    period: "2018–2021",
+    period: periods.scottsProductOwner,
     bullets: [
       "Led product strategy and customer experience initiatives across multiple national consumer brands",
       "Launched BonniePlants.com, the company's most successful first-year ecommerce launch",
@@ -115,7 +115,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "The Scotts Miracle-Gro Company",
     location: "Marysville, OH",
     title: "Digital Marketing Manager",
-    period: "2013–2018",
+    period: periods.scottsDigitalMarketing,
     bullets: [
       "Led website strategy, CRM, ecommerce, search, localization, and digital marketing initiatives",
       "Developed the company's first Amazon advertising strategy, generating $1M in first-year sales with a 5:1 return on ad spend",
@@ -126,7 +126,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "eMusic / 7digital",
     location: "New York, NY / Remote",
     title: "Director, Business Development & Brand Partnerships",
-    period: "2008–2013",
+    period: periods.emusic,
     bullets: [
       "Generated new business through consultative selling, needs analysis, proposal development, and strategic account management.",
       "Consulted with brands and agencies to develop custom marketing and promotional programs",
@@ -139,7 +139,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "Pearson Education",
     location: "Upper Saddle River, NJ",
     title: "Acquisitions Editor / Product Manager",
-    period: "2004–2006",
+    period: periods.pearsonProduct,
     bullets: [
       "Published 14 educational products and recruited authors for new product initiatives",
       "Conducted market research, competitive analysis, and customer research",
@@ -151,7 +151,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "McGraw-Hill Higher Education",
     location: "New York, NY",
     title: "Senior Sales Executive",
-    period: "2007–2008",
+    period: periods.mcgrawHill,
     bullets: [
       "Managed a $3.38M sales territory serving colleges and universities",
       "Delivered 17.7% sales growth and earned Sales Goal Club recognition",
@@ -162,14 +162,14 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "Prentice Hall",
     location: "Columbus, OH / Austin, TX",
     title: "Senior Sales Executive",
-    period: "2002–2004",
+    period: periods.prenticeHallOutside,
     bullets: [],
   },
   {
     org: "Prentice Hall",
     location: "Columbus, OH / Austin, TX",
     title: "Inside Sales Executive",
-    period: "1999–2002",
+    period: periods.prenticeHallInside,
     bullets: [
       "Managed approximately 100 institutional accounts and 10,000 customer contacts",
       "Consistently exceeded sales goals and earned Top Performer recognition",

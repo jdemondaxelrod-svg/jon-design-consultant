@@ -1,5 +1,3 @@
-import { periods } from "./career";
-
 export const hero = {
   headline:
     "Design, construction, and customer experience — brought together through real residential work.",
@@ -35,7 +33,7 @@ export const whatIBring = [
   },
   {
     title: "Customer Experience & Product Thinking",
-    body: "Measurable results at Soft Surroundings (+15% site conversion, +24% mobile) and Scotts Miracle-Gro (BonniePlants.com launch, 3× Scottsprogram.com growth, $1M Amazon program at 5:1 ROAS).",
+    body: "Product and digital experience leadership at Soft Surroundings and Scotts Miracle-Gro — specification, prioritization, customer journey design, and cross-functional execution at national consumer brands.",
   },
 ] as const;
 
@@ -48,61 +46,6 @@ export const fieldProof = [
 
 export const fieldProofNote =
   "Repeat and referral-driven business across Central Ohio.";
-
-export const careerStats = [
-  { value: "+15%", label: "Site conversion · Soft Surroundings" },
-  { value: "+24%", label: "Mobile conversion · Soft Surroundings" },
-  { value: "3×", label: "Scottsprogram.com growth" },
-  { value: "5:1", label: "ROAS · $1M Amazon advertising program" },
-] as const;
-
-export const careerHighlights = [
-  {
-    org: "Soft Surroundings",
-    title: "Director of Product & Digital Experience",
-    period: periods.softSurroundings,
-    results: [
-      "Improved site conversion by 15% and mobile conversion by 24%.",
-      "Led product and digital experience strategy for a premium lifestyle brand.",
-    ],
-  },
-  {
-    org: "Scotts Miracle-Gro",
-    title: "Product Owner, E-Commerce",
-    period: periods.scottsProductOwner,
-    results: [
-      "Launched BonniePlants.com.",
-      "Drove 3× growth on Scottsprogram.com.",
-    ],
-  },
-  {
-    org: "Scotts Miracle-Gro",
-    title: "Digital Marketing Manager",
-    period: periods.scottsDigitalMarketing,
-    results: [
-      "Managed $1M Amazon advertising program achieving 5:1 ROAS.",
-      "Coordinated vendor quotes, campaign specification, and performance analysis.",
-    ],
-  },
-  {
-    org: "eMusic / 7digital",
-    title: "Brand Partnerships",
-    period: periods.emusic,
-    results: [
-      "Developed national brand partnerships with Converse, Heineken, American Express, and others.",
-      "High-touch client relationships across diverse stakeholder personalities.",
-    ],
-  },
-  {
-    org: "Prentice Hall · McGraw-Hill · Pearson Education",
-    title: "Consultative Sales & Product Management",
-    period: `${periods.prenticeHallInside} – ${periods.pearsonProduct}`,
-    results: [
-      "Inside and outside sales, account management, and digital product leadership in educational publishing.",
-      "Foundation for phone-based qualification and consultative client development.",
-    ],
-  },
-] as const;
 
 export const homeownerFeedback = {
   intro:
@@ -240,34 +183,6 @@ export const learnedInsideHomes = [
   "Good design reduces anxiety.",
   "Accessibility should feel beautiful, not clinical.",
   "Communication is part of the craft.",
-] as const;
-
-export const experienceSnapshot = [
-  {
-    org: "The Clintonville Handyman",
-    title: "Owner & Residential Remodeling Consultant",
-    period: periods.clintonvilleHandyman,
-  },
-  {
-    org: "Éliane Design",
-    title: "Founder",
-    period: periods.elianeDesign,
-  },
-  {
-    org: "The Karole Foundation",
-    title: "Founder",
-    period: periods.karoleFoundation,
-  },
-  {
-    org: "Soft Surroundings / Scotts Miracle-Gro",
-    title: "Product & Customer Experience Leadership",
-    period: `${periods.softSurroundings} · ${periods.scottsProductOwner}`,
-  },
-  {
-    org: "eMusic / 7digital / Prentice Hall / McGraw-Hill",
-    title: "Consultative Sales & Business Development",
-    period: `${periods.prenticeHallInside} – ${periods.emusic}`,
-  },
 ] as const;
 
 export const whyDaveFox = {

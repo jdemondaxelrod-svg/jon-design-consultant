@@ -1,4 +1,3 @@
-import { CareerResults } from "./components/career-results";
 import { Contact } from "./components/contact";
 import { ExperienceIntersects } from "./components/experience-intersects";
 import { ExperienceSnapshot } from "./components/experience-snapshot";
@@ -22,7 +21,6 @@ export default function Home() {
         <WhatIBring />
         <ProofFromField />
         <WhatHomeownersValue />
-        <CareerResults />
         <ExperienceIntersects />
         <LearnedInsideHomes />
         <ExperienceSnapshot />
