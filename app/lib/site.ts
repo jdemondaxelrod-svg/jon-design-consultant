@@ -2,9 +2,9 @@ const productionUrl = "https://www.jondemondaxelrodstudio.com";
 
 export const siteConfig = {
   name: "Jon DeMond-Axelrod",
-  title: "Jon DeMond-Axelrod — Design/Sales Consultant",
+  title: "Application — Design/Sales Consultant · Dave Fox Remodeling",
   description:
-    "Design and sales consultant for upscale residential remodeling in Columbus, Ohio. Consultative sales, SoftPlan, scoping, estimating, and homeowner experience across kitchens, baths, additions, and whole-house remodels.",
+    "Cover letter and resume from Jon DeMond-Axelrod for the Design/Sales Consultant position at Dave Fox Remodeling. Prepared for Stephen Dempsey and team.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.NODE_ENV === "production"

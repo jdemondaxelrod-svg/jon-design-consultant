@@ -1,42 +1,32 @@
 import { siteConfig } from "../lib/site";
 
 const navItems = [
-  { href: "#responsibilities", label: "Responsibilities" },
-  { href: "#experience", label: "Experience" },
-  { href: "#background", label: "Background" },
+  { href: "#letter", label: "Cover letter" },
+  { href: "#resume", label: "Resume" },
   { href: "#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 mix-blend-difference">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10 lg:px-14">
+    <header className="sticky top-0 z-50 border-b border-paper-deep bg-paper/95 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 md:px-0">
         <a
           href="#"
-          className="font-sans text-[0.7rem] font-medium tracking-[0.12em] text-white uppercase"
+          className="font-serif text-base tracking-tight text-ink"
         >
-          JDA
+          {siteConfig.name}
         </a>
-        <nav
-          className="hidden items-center gap-8 md:flex"
-          aria-label="Primary"
-        >
+        <nav className="flex items-center gap-5" aria-label="Primary">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="font-sans text-[0.65rem] tracking-[0.14em] text-white/80 uppercase transition-colors hover:text-white"
+              className="font-sans text-[0.65rem] tracking-[0.12em] text-stone uppercase transition-colors hover:text-ink"
             >
               {item.label}
             </a>
           ))}
         </nav>
-        <a
-          href={`tel:${siteConfig.phone}`}
-          className="font-sans text-[0.65rem] tracking-[0.12em] text-white/80 uppercase transition-colors hover:text-white md:hidden"
-        >
-          Call
-        </a>
       </div>
     </header>
   );

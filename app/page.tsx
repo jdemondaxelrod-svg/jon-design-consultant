@@ -1,24 +1,16 @@
-import { Background } from "./components/background";
 import { Contact } from "./components/contact";
-import { Hero } from "./components/hero";
-import { Practice } from "./components/practice";
-import { ProjectScope } from "./components/project-scope";
-import { ProofBar } from "./components/proof-bar";
+import { CoverLetter } from "./components/cover-letter";
+import { ResumeDocument } from "./components/resume-document";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
-import { Ventures } from "./components/ventures";
 
 export default function Home() {
   return (
     <>
       <SiteHeader />
       <main>
-        <Hero />
-        <ProjectScope />
-        <ProofBar />
-        <Practice />
-        <Ventures />
-        <Background />
+        <CoverLetter />
+        <ResumeDocument />
         <Contact />
       </main>
       <SiteFooter />
