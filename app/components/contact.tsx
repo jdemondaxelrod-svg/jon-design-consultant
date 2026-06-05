@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig } from "../lib/site";
 import { FadeIn } from "./fade-in";
 import { SectionLabel } from "./section-label";
@@ -19,19 +20,19 @@ export function Contact() {
             Let&apos;s continue the conversation.
           </h2>
           <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-foreground-muted">
-            Download my resume or reach out directly. I&apos;d welcome the
+            View my resume or reach out directly. I&apos;d welcome the
             opportunity to speak with Stephen Dempsey and the Dave Fox team.
           </p>
         </FadeIn>
 
         <FadeIn delay={100}>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
+            <Link
               href={siteConfig.resumePath}
               className="inline-flex items-center border border-foreground/20 bg-foreground px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-background uppercase transition-colors hover:bg-foreground-muted"
             >
-              Download Resume
-            </a>
+              View Resume
+            </Link>
           </div>
 
           <div className="mt-14 flex flex-col gap-4 sm:flex-row sm:gap-12">

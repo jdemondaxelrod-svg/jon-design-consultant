@@ -67,3 +67,14 @@ body {
     transition: none;
   }
 }
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #2a2826;
+  }
+
+  @page {
+    margin: 0.75in;
+  }
+}

@@ -27,7 +27,7 @@ export const whatIBring = [
   },
   {
     title: "Consultative Sales",
-    body: "Twenty-five years qualifying needs, listening carefully, and helping people make complex decisions — from publishing and consumer brands to residential work.",
+    body: "Twenty-five years qualifying needs, listening carefully, and closing complex decisions — from educational publishing and national brand partnerships to residential remodeling consultation.",
   },
   {
     title: "Residential Field Experience",
@@ -35,7 +35,7 @@ export const whatIBring = [
   },
   {
     title: "Customer Experience & Product Thinking",
-    body: "Product and digital experience leadership at Soft Surroundings and Scotts — specification, prioritization, presentation, and conversion at scale.",
+    body: "Measurable results at Soft Surroundings (+15% site conversion, +24% mobile) and Scotts Miracle-Gro (BonniePlants.com launch, 3× Scottsprogram.com growth, $1M Amazon program at 5:1 ROAS).",
   },
 ] as const;
 
@@ -48,6 +48,175 @@ export const fieldProof = [
 
 export const fieldProofNote =
   "Repeat and referral-driven business across Central Ohio.";
+
+export const careerStats = [
+  { value: "+15%", label: "Site conversion · Soft Surroundings" },
+  { value: "+24%", label: "Mobile conversion · Soft Surroundings" },
+  { value: "3×", label: "Scottsprogram.com growth" },
+  { value: "5:1", label: "ROAS · $1M Amazon advertising program" },
+] as const;
+
+export const careerHighlights = [
+  {
+    org: "Soft Surroundings",
+    title: "Director of Product & Digital Experience",
+    period: periods.softSurroundings,
+    results: [
+      "Improved site conversion by 15% and mobile conversion by 24%.",
+      "Led product and digital experience strategy for a premium lifestyle brand.",
+    ],
+  },
+  {
+    org: "Scotts Miracle-Gro",
+    title: "Product Owner, E-Commerce",
+    period: periods.scottsProductOwner,
+    results: [
+      "Launched BonniePlants.com.",
+      "Drove 3× growth on Scottsprogram.com.",
+    ],
+  },
+  {
+    org: "Scotts Miracle-Gro",
+    title: "Digital Marketing Manager",
+    period: periods.scottsDigitalMarketing,
+    results: [
+      "Managed $1M Amazon advertising program achieving 5:1 ROAS.",
+      "Coordinated vendor quotes, campaign specification, and performance analysis.",
+    ],
+  },
+  {
+    org: "eMusic / 7digital",
+    title: "Brand Partnerships",
+    period: periods.emusic,
+    results: [
+      "Developed national brand partnerships with Converse, Heineken, American Express, and others.",
+      "High-touch client relationships across diverse stakeholder personalities.",
+    ],
+  },
+  {
+    org: "Prentice Hall · McGraw-Hill · Pearson Education",
+    title: "Consultative Sales & Product Management",
+    period: `${periods.prenticeHallInside} – ${periods.pearsonProduct}`,
+    results: [
+      "Inside and outside sales, account management, and digital product leadership in educational publishing.",
+      "Foundation for phone-based qualification and consultative client development.",
+    ],
+  },
+] as const;
+
+export const homeownerFeedback = {
+  intro:
+    "Over the last several years, I have worked with more than 120 homeowners across Central Ohio. While the projects vary, the feedback is remarkably consistent. Homeowners repeatedly highlight trust, communication, problem solving, collaboration, and craftsmanship.",
+  takeaway:
+    "These are the same qualities homeowners value in me — and the same qualities that would make me successful as a Design Consultant at Dave Fox.",
+  themes: [
+    {
+      title: "Trust",
+      copy: "Successful residential projects begin with trust. Homeowners consistently describe Jon as transparent, dependable, and someone they feel comfortable inviting into their homes.",
+      quotes: [
+        {
+          text: "I trust him with all of my projects. Highly recommend.",
+          attribution: "Erin L.",
+          date: "June 17, 2024",
+        },
+        {
+          text: "Very trustworthy.",
+          attribution: "Jennifer G.",
+          date: "January 6, 2026",
+        },
+        {
+          text: "He was very upfront with pricing and conscientious about his billing.",
+          attribution: "Kevin S.",
+          date: "June 20, 2024",
+        },
+      ],
+    },
+    {
+      title: "Communication",
+      copy: "Customers frequently mention responsiveness, expectation-setting, and the ability to explain options and tradeoffs clearly.",
+      quotes: [
+        {
+          text: "He kept me updated throughout the whole process.",
+          attribution: "DJ H.",
+          date: "April 17, 2024",
+        },
+        {
+          text: "Jon did a great job communicating with us throughout the project.",
+          attribution: "Beth B.",
+          date: "January 25, 2026",
+        },
+        {
+          text: "He walked me through what he would be doing so there would be no surprises.",
+          attribution: "Betsy V.",
+          date: "April 11, 2024",
+        },
+      ],
+    },
+    {
+      title: "Problem Solving",
+      copy: "Many projects involve diagnosing underlying issues, evaluating alternatives, and helping homeowners make informed decisions.",
+      quotes: [
+        {
+          text: "He saved me money by coming up with a different way to finish the job.",
+          attribution: "Callie B.",
+          date: "May 9, 2024",
+        },
+        {
+          text: "No stone or option left unturned.",
+          attribution: "Pedro A.",
+          date: "October 9, 2024",
+        },
+        {
+          text: "He addressed other issues that were not completed properly by the previous contractor.",
+          attribution: "Beth B.",
+          date: "January 25, 2026",
+        },
+      ],
+    },
+    {
+      title: "Collaboration",
+      copy: "Jon approaches projects as a collaborative process, helping homeowners navigate decisions while respecting their goals and preferences.",
+      quotes: [
+        {
+          text: "He considered our opinion and feedback while providing suggestions on how to move forward.",
+          attribution: "Pedro A.",
+          date: "October 9, 2024",
+        },
+        {
+          text: "He also provided great consultation on other projects I intend on completing myself.",
+          attribution: "Jeyshan P.",
+          date: "June 6, 2024",
+        },
+        {
+          text: "Easy and pleasant to work with.",
+          attribution: "Rowan P.",
+          date: "January 2, 2026",
+        },
+      ],
+    },
+    {
+      title: "Craftsmanship & Quality",
+      copy: "Homeowners consistently describe attention to detail, quality workmanship, and pride in execution.",
+      quotes: [
+        {
+          text: "Careful, calculated and meticulous.",
+          attribution: "Pedro A.",
+          date: "October 9, 2024",
+        },
+        {
+          text: "Outstanding work. Thorough, detailed, and considerate.",
+          attribution: "Chiquita M.",
+          date: "January 14, 2026",
+        },
+        {
+          text: "The quality of his work is outstanding.",
+          attribution: "Bhavik P.",
+          date: "October 2, 2024",
+        },
+      ],
+    },
+  ],
+} as const;
 
 export const learnedInsideHomes = [
   "Homeowners need guidance, not just options.",

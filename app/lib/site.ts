@@ -16,7 +16,8 @@ export const siteConfig = {
   phoneDisplay: "614-404-4662",
   location: "Columbus, Ohio",
   locale: "en_US",
-  resumePath: "/Jon-DeMond-Axelrod-Resume.pdf",
+  resumePath: "/resume",
+  resumeFilename: "Jon-DeMond-Axelrod-Resume.pdf",
   targetCompany: "Dave Fox Design Build Remodelers",
   targetRole: "Residential Design Consultant",
 } as const;
