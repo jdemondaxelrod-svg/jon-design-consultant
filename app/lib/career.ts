@@ -8,7 +8,10 @@ export const career = {
   scottsProductOwner: { start: 2018, end: 2021 },
   scottsDigitalMarketing: { start: 2013, end: 2018 },
   emusic: { start: 2008, end: 2013 },
-  pearson: { start: 1999, end: 2006 },
+  pearsonProduct: { start: 2004, end: 2006 },
+  mcgrawHill: { start: 2007, end: 2008 },
+  prenticeHallOutside: { start: 2002, end: 2004 },
+  prenticeHallInside: { start: 1999, end: 2002 },
 } as const;
 
 export function formatPeriod(
@@ -44,5 +47,17 @@ export const periods = {
     career.scottsDigitalMarketing.end,
   ),
   emusic: formatPeriod(career.emusic.start, career.emusic.end),
-  pearson: formatPeriod(career.pearson.start, career.pearson.end),
+  pearsonProduct: formatPeriod(
+    career.pearsonProduct.start,
+    career.pearsonProduct.end,
+  ),
+  mcgrawHill: formatPeriod(career.mcgrawHill.start, career.mcgrawHill.end),
+  prenticeHallOutside: formatPeriod(
+    career.prenticeHallOutside.start,
+    career.prenticeHallOutside.end,
+  ),
+  prenticeHallInside: formatPeriod(
+    career.prenticeHallInside.start,
+    career.prenticeHallInside.end,
+  ),
 };

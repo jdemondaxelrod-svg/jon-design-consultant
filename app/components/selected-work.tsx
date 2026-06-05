@@ -6,25 +6,25 @@ const ventures = [
   {
     category: "Columbus, Ohio",
     title: "The Clintonville Handyman",
-    subtitle: "Owner & Residential Design-Build Consultant",
+    subtitle: "Owner & Residential Remodeling Consultant",
     description:
-      "Owner & residential design-build consultant. 120+ homeowners served, nearly 200 documented opportunities, and 500+ repair, remodeling, and accessibility tasks — carpentry, drywall, painting, plumbing, electrical, siding, fixtures, and home diagnostics. Referral-driven, five-star reputation.",
+      "Residential remodeling, repair, and accessibility services company serving homeowners throughout Central Ohio. 120+ homeowners served, nearly 200 documented opportunities, and 500+ tasks spanning carpentry, drywall, painting, doors, trim, accessibility modifications, siding, fixtures, plumbing, electrical work, and home diagnostics.",
     period: periods.clintonvilleHandyman,
   },
   {
     category: "Design practice",
     title: "Éliane Design",
-    subtitle: "Founder & Principal Design Consultant",
+    subtitle: "Founder",
     description:
-      "Luxury accessibility and aging-in-place design. Consultation framework, architectural product curation, specification, procurement coordination, installation planning, and brand experience.",
+      "Luxury accessibility and aging-in-place brand focused on integrating safety, mobility, and independence into beautiful residential environments. Brand strategy, product catalog, premium product curation, manufacturer outreach, consultation, and specification processes.",
     period: periods.elianeDesign,
   },
   {
     category: "Nonprofit",
     title: "The Karole Foundation",
-    subtitle: "Founder & Executive Director",
+    subtitle: "Founder",
     description:
-      "Donor experience, fundraising, and programs connecting support to measurable home safety outcomes — with a design-forward approach emphasizing dignity, beauty, and independence.",
+      "Nonprofit initiative focused on accessibility, aging-in-place, and home safety. Mission, strategic vision, organizational framework, community outreach, and awareness initiatives centered on safety, independence, and dignity at home.",
     period: periods.karoleFoundation,
   },
 ];
@@ -70,9 +70,9 @@ export function SelectedWork() {
             Current practice & project focus
           </h2>
           <p className="mb-14 max-w-2xl font-sans text-sm leading-relaxed text-foreground-subtle md:mb-20 md:text-base">
-            Owner-operated residential design-build consulting across Central
-            Ohio, with parallel leadership in accessibility design and community
-            impact.
+            Owner-operated residential remodeling and accessibility work across
+            Central Ohio, with parallel ventures focused on aging-in-place,
+            home safety, and design-forward independence.
           </p>
         </FadeIn>
 

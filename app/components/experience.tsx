@@ -7,36 +7,36 @@ const currentRoles = [
     period: periods.clintonvilleHandyman,
     location: "Columbus, Ohio",
     role: "The Clintonville Handyman",
-    title: "Owner & Residential Design-Build Consultant",
+    title: "Owner & Residential Remodeling Consultant",
     detail:
-      "Built and operate a referral-driven remodeling, repair, and accessibility company. 120+ homeowners served, ~200 documented opportunities, 500+ tasks delivered. Full ownership of consultation, estimating, procurement, project management, and operations. Specialized in aging-in-place and accessibility planning.",
+      "Operate a residential remodeling, repair, and accessibility services company serving Central Ohio. 120+ homeowners served, nearly 200 documented opportunities, and 500+ repair, remodeling, accessibility, and home-improvement tasks delivered. Full ownership of consultation, estimating, scheduling, procurement, project management, invoicing, and business operations.",
   },
   {
     period: periods.elianeDesign,
     location: "Columbus, Ohio",
     role: "Éliane Design",
-    title: "Founder & Principal Design Consultant",
+    title: "Founder",
     detail:
-      "Luxury accessibility and aging-in-place design. Service standards, architectural product curation, manufacturer partnerships, specification, procurement, and installation planning.",
+      "Luxury accessibility and aging-in-place brand focused on safety, mobility, and independence in beautiful residential environments. Developed brand strategy, website, product catalog, content, customer experience framework, product sourcing, consultation, and specification processes.",
   },
   {
     period: periods.karoleFoundation,
     location: "Columbus, Ohio",
     role: "The Karole Foundation",
-    title: "Founder & Executive Director",
+    title: "Founder",
     detail:
-      "Fundraising, donor experience, community outreach, and programs connecting support to measurable home safety outcomes.",
+      "Nonprofit initiative focused on accessibility, aging-in-place, and home safety. Developed mission, strategic vision, website, organizational framework, community outreach, and accessibility awareness initiatives.",
   },
 ];
 
 const previousRoles = [
   {
     period: periods.softSurroundings,
-    location: "Remote",
+    location: "St. Louis, MO / Remote",
     role: "Soft Surroundings",
-    title: "Senior Product Manager",
+    title: "Director of Product & Digital Experience",
     detail:
-      "Ecommerce product strategy, conversion optimization, usability, and cross-functional customer experience leadership.",
+      "Led customer experience and ecommerce initiatives for a national retail brand. Directed digital experience strategy, improved site conversion by 15% and mobile conversion by 24%, and introduced Agile and Scrum practices to improve collaboration and execution.",
   },
   {
     period: periods.scottsProductOwner,
@@ -44,7 +44,7 @@ const previousRoles = [
     role: "Scotts Miracle-Gro",
     title: "Product Owner / Digital Experience Manager",
     detail:
-      "Customer experience roadmaps, website launches, redesigns, and cross-functional coordination across national consumer brands.",
+      "Led product strategy and customer experience initiatives across national consumer brands. Launched BonniePlants.com, directed redesigns and customer journey work, and led initiatives contributing to 3X sales growth for Scottsprogram.com.",
   },
   {
     period: periods.scottsDigitalMarketing,
@@ -52,7 +52,7 @@ const previousRoles = [
     role: "Scotts Miracle-Gro",
     title: "Digital Marketing Manager",
     detail:
-      "Digital marketing, website strategy, ecommerce, CRM, and customer engagement across multiple consumer brands.",
+      "Led website strategy, CRM, ecommerce, search, localization, and digital marketing. Developed the company's first Amazon advertising strategy, generating $1M in first-year sales with a 5:1 return on ad spend, and built a 1,000+ member customer research community.",
   },
   {
     period: periods.emusic,
@@ -60,30 +60,46 @@ const previousRoles = [
     role: "eMusic / 7digital",
     title: "Director, Business Development & Brand Partnerships",
     detail:
-      "Complex sales cycles, proposals, presentations, pricing strategy, and partnership agreements with major consumer brands.",
+      "Generated new business through consultative selling, needs analysis, proposal development, and strategic account management. Developed partnerships with brands including Converse, Heineken, DKNY, Foot Locker, NPR, Pizza Hut, Calvin Klein, and Frito-Lay.",
   },
   {
-    period: periods.pearson,
-    location: "",
-    role: "Pearson / Prentice Hall / McGraw-Hill",
-    title: "Educational Sales & Account Management",
+    period: periods.mcgrawHill,
+    location: "New York, NY",
+    role: "McGraw-Hill Higher Education",
+    title: "Senior Sales Executive",
     detail:
-      "Consultative presentations, product demonstrations, and long-term account development with faculty and institutions.",
+      "Managed a $3.38M higher education sales territory, delivered 17.7% sales growth, earned Sales Goal Club recognition, and consulted with faculty and institutions on educational and technology solutions.",
+  },
+  {
+    period: periods.pearsonProduct,
+    location: "Upper Saddle River, NJ",
+    role: "Pearson Education",
+    title: "Acquisitions Editor / Product Manager",
+    detail:
+      "Published 14 educational products, recruited authors, conducted market and customer research, and led cross-functional teams developing educational software and textbook products including early digital learning platforms.",
+  },
+  {
+    period: `${periods.prenticeHallInside} / ${periods.prenticeHallOutside}`,
+    location: "",
+    role: "Prentice Hall",
+    title: "Inside Sales Executive / Senior Sales Executive",
+    detail:
+      "Managed approximately 100 institutional accounts and 10,000 customer contacts. Consistently exceeded goals, earned Top Performer recognition, qualified for Sales Goal Club, and generated $11.6M in cumulative sales.",
   },
 ];
 
 const strengths = [
   "Residential remodeling & design consultation",
+  "Remodeling & home improvement",
   "Consultative sales",
   "Project scoping & estimating",
-  "Homeowner communication",
   "Customer experience strategy",
-  "Design thinking",
   "Accessibility & aging-in-place",
+  "Homeowner communication",
   "Product specification & procurement",
   "Business development",
-  "Vendor & stakeholder coordination",
-  "Entrepreneurial leadership",
+  "Vendor & stakeholder management",
+  "Project management",
   "Cross-functional leadership",
 ];
 
@@ -140,12 +156,12 @@ export function Experience() {
                 id="experience-heading"
                 className="mb-6 max-w-2xl font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] font-medium leading-[1.2] text-foreground"
               >
-                Sales, strategy, and residential design-build
+                Remodeling, customer experience, and consultative sales
               </h2>
               <p className="mb-16 max-w-xl font-sans text-base leading-relaxed text-foreground-muted md:mb-20">
-                From national consumer brands to owner-operated residential
-                practice in Central Ohio — building trust, simplifying
-                complexity, and delivering buildable solutions.
+                From owner-operated residential practice in Central Ohio to
+                national consumer brands and higher education sales — a career
+                built around trust, clarity, and practical execution.
               </p>
             </FadeIn>
 

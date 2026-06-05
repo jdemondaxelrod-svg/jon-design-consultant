@@ -22,11 +22,11 @@ export function Contact() {
               Let&apos;s connect
             </h2>
             <p className="mt-8 max-w-lg font-sans text-base leading-relaxed text-foreground-muted">
-              I am interested in design / sales consultant opportunities with
-              established design-build teams serving upscale residential clients
-              in Central Ohio and beyond. I would welcome a conversation about
-              how my background can support your designers, project managers,
-              and homeowners.
+              I am interested in residential design consultant and remodeling
+              opportunities where consultative sales, homeowner communication,
+              accessibility, and practical construction problem-solving matter.
+              I would welcome a conversation about how my background can support
+              your clients, teams, and projects.
             </p>
           </FadeIn>
 

@@ -19,37 +19,36 @@ export function Story() {
               id="story-heading"
               className="font-serif text-[clamp(2rem,4vw,3rem)] font-medium leading-[1.15] tracking-[-0.02em] text-foreground"
             >
-              From consultative sales to hands-on design-build practice
+              At the intersection of home, design, and customer experience
             </h2>
           </FadeIn>
 
           <FadeIn className="lg:col-span-7 lg:pt-2" delay={160}>
             <div className="space-y-6 font-sans text-base leading-[1.75] text-foreground-muted md:text-[1.05rem]">
               <p>
-                My career spans consultative sales, customer experience strategy,
-                business development, product management, and hands-on
-                residential remodeling. I have helped customers navigate complex
-                decisions across education, consumer brands, digital products, and
-                the home itself.
+                My work sits at the intersection of residential remodeling,
+                consultative sales, customer experience strategy, business
+                development, product management, and hands-on construction. I
+                help homeowners navigate complex decisions and create
+                environments that are functional, beautiful, and built around how
+                people actually live.
               </p>
               <p>
-                Today I own and operate The Clintonville Handyman — a residential
-                remodeling, repair, and accessibility company serving homeowners
-                throughout Central Ohio. Through hundreds of customer
-                interactions, I have developed deep expertise in homeowner
-                consultation, project scoping, estimating, construction
-                problem-solving, accessibility planning, and end-to-end customer
-                experience. I conduct every consultation, estimate, procurement
-                decision, and project management function personally.
+                I own and operate The Clintonville Handyman, a residential
+                remodeling, repair, and accessibility services company serving
+                homeowners throughout Central Ohio. Through a documented
+                pipeline of nearly 200 customer opportunities and more than 500
+                delivered tasks, I have developed practical expertise in
+                homeowner consultation, project scoping, estimating, construction
+                problem-solving, accessibility planning, and business operations.
               </p>
               <p>
-                I also lead Éliane Design, a luxury accessibility and
-                aging-in-place practice, and The Karole Foundation, advancing
-                design-forward home safety through community partnerships. I am
-                pursuing design / sales consultant roles with established
-                design-build teams — bringing field-tested scoping discipline,
-                specification experience, and the consultative communication
-                homeowners and project managers rely on.
+                I also founded Éliane Design and The Karole Foundation —
+                organizations focused on accessibility, aging-in-place, and
+                helping people remain safe and independent at home. Together,
+                these ventures reflect a design-forward approach to residential
+                problem solving: practical, human-centered, and grounded in the
+                lived realities of the home.
               </p>
             </div>
           </FadeIn>

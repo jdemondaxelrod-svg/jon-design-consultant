@@ -7,7 +7,7 @@ export function Hero() {
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
         <p className="opacity-0-initial animate-fade-in animation-delay-100 mb-8 font-sans text-[0.7rem] tracking-[0.22em] uppercase text-foreground-subtle">
-          Design consultant · Residential remodeling · Consultative sales
+          Residential design consultant · Remodeling · Consultative sales
         </p>
 
         <h1
@@ -32,10 +32,9 @@ export function Hero() {
         </p>
 
         <p className="opacity-0-initial animate-fade-up animation-delay-600 mt-10 max-w-2xl font-sans text-base leading-relaxed text-foreground-subtle md:mt-12">
-          Design-minded consultant, entrepreneur, and residential problem
-          solver. I own and operate The Clintonville Handyman — and help
-          homeowners transform goals, ideas, and challenges into practical,
-          buildable solutions.
+          Entrepreneur, residential remodeling consultant, and customer
+          experience leader focused on the intersection of home, design,
+          accessibility, and aging-in-place.
         </p>
       </div>
     </section>
