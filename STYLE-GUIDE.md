@@ -116,7 +116,7 @@ jdemondaxelrod@gmail.com · 614-404-4662 · Columbus, Ohio   ← Figtree, 9 pt, 
 
 ### Experience entry
 ```
-The Clintonville Handyman          2022–Present
+The Clintonville Handyman          2024–Present
 Owner & Residential Remodeling Consultant · Columbus, Ohio
 – Bullet one
 – Bullet two
