@@ -1,5 +1,6 @@
 import { CareerResults } from "./components/career-results";
 import { Contact } from "./components/contact";
+import { ExperienceIntersects } from "./components/experience-intersects";
 import { ExperienceSnapshot } from "./components/experience-snapshot";
 import { Hero } from "./components/hero";
 import { LearnedInsideHomes } from "./components/learned-inside-homes";
@@ -22,6 +23,7 @@ export default function Home() {
         <ProofFromField />
         <WhatHomeownersValue />
         <CareerResults />
+        <ExperienceIntersects />
         <LearnedInsideHomes />
         <ExperienceSnapshot />
         <WhyDaveFox />

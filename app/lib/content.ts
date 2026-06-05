@@ -218,6 +218,26 @@ export const homeownerFeedback = {
   ],
 } as const;
 
+export const experienceIntersects = {
+  title: "Where experience intersects",
+  opening: [
+    "The most important lessons in my career didn't come from staying in one lane.",
+    "They came from working at the intersections.",
+  ],
+  intersections: [
+    "The intersection of sales and service.",
+    "The intersection of design and function.",
+    "The intersection of strategy and execution.",
+    "The intersection of customer experience and construction.",
+  ],
+  closing: [
+    "Over time, I've learned that many of the same skills apply whether you're helping a professor select course materials, developing a partnership with a national brand, improving an ecommerce experience, or helping a homeowner make decisions about their home.",
+    "The context changes.",
+    "The principles do not.",
+    "That perspective shapes how I approach every project today.",
+  ],
+} as const;
+
 export const learnedInsideHomes = [
   "Homeowners need guidance, not just options.",
   "Trust is built before a project is sold.",
