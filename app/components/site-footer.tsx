@@ -1,12 +1,16 @@
 import { siteConfig } from "../lib/site";
 
 export function SiteFooter() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="border-t border-paper-deep px-6 py-6">
-      <div className="mx-auto max-w-3xl md:px-0">
-        <p className="font-sans text-xs text-stone-light">
-          Prepared for {siteConfig.targetContact.name},{" "}
-          {siteConfig.targetCompany} · {siteConfig.targetRole}
+    <footer className="border-t border-border px-6 py-8 md:px-10 lg:px-16">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-sans text-xs text-foreground-subtle">
+          © {year} {siteConfig.name}
+        </p>
+        <p className="font-sans text-xs text-foreground-subtle">
+          {siteConfig.location} · {siteConfig.targetCompany}
         </p>
       </div>
     </footer>

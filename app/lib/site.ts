@@ -2,9 +2,10 @@ const productionUrl = "https://www.jondemondaxelrodstudio.com";
 
 export const siteConfig = {
   name: "Jon DeMond-Axelrod",
-  title: "Application — Design/Sales Consultant · Dave Fox Remodeling",
+  title:
+    "Jon DeMond-Axelrod — Residential Design Consultant Application",
   description:
-    "Cover letter and resume from Jon DeMond-Axelrod for the Design/Sales Consultant position at Dave Fox Remodeling. Prepared for Stephen Dempsey and team.",
+    "Residential remodeling consultant and customer experience leader applying to Dave Fox Design Build Remodelers. Consultative sales, field experience, and design thinking in Columbus, Ohio.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.NODE_ENV === "production"
@@ -15,11 +16,7 @@ export const siteConfig = {
   phoneDisplay: "614-404-4662",
   location: "Columbus, Ohio",
   locale: "en_US",
-  targetRole: "Design/Sales Consultant",
-  targetCompany: "Dave Fox Remodeling",
-  targetContact: {
-    name: "Stephen Dempsey",
-    title: "Sales Director",
-    email: "sdempsey@davefox.com",
-  },
+  resumePath: "/Jon-DeMond-Axelrod-Resume.pdf",
+  targetCompany: "Dave Fox Design Build Remodelers",
+  targetRole: "Residential Design Consultant",
 } as const;

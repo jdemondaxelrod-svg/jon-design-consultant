@@ -1,32 +1,43 @@
 import { siteConfig } from "../lib/site";
 
 const navItems = [
-  { href: "#letter", label: "Cover letter" },
-  { href: "#resume", label: "Resume" },
+  { href: "#why", label: "Why" },
+  { href: "#bring", label: "Strengths" },
+  { href: "#proof", label: "Proof" },
+  { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 border-b border-paper-deep bg-paper/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 md:px-0">
+    <header className="fixed top-0 right-0 left-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10 lg:px-16">
         <a
           href="#"
-          className="font-serif text-base tracking-tight text-ink"
+          className="font-serif text-lg tracking-tight text-foreground transition-opacity hover:opacity-70"
         >
           {siteConfig.name}
         </a>
-        <nav className="flex items-center gap-5" aria-label="Primary">
+        <nav
+          className="hidden items-center gap-7 lg:flex"
+          aria-label="Primary"
+        >
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="font-sans text-[0.65rem] tracking-[0.12em] text-stone uppercase transition-colors hover:text-ink"
+              className="font-sans text-[0.65rem] tracking-[0.14em] text-foreground-muted uppercase transition-colors hover:text-foreground"
             >
               {item.label}
             </a>
           ))}
         </nav>
+        <a
+          href={siteConfig.resumePath}
+          className="font-sans text-[0.65rem] tracking-[0.14em] text-foreground-muted uppercase transition-colors hover:text-foreground"
+        >
+          Resume
+        </a>
       </div>
     </header>
   );

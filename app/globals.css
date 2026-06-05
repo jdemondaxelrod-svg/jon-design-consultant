@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #12100e;
-  --paper: #f6f2ec;
-  --paper-deep: #ede8e0;
-  --stone: #6f6860;
-  --stone-light: #9a9288;
-  --clay: #b4532e;
-  --clay-soft: #e8d5cc;
-  --night: #1a1714;
+  --background: #faf8f5;
+  --background-alt: #f3f0eb;
+  --foreground: #2a2826;
+  --foreground-muted: #5c5650;
+  --foreground-subtle: #8a837a;
+  --border: #e5e0d8;
+  --border-strong: #d4cdc3;
+  --accent: #6b5d52;
+  --accent-soft: #ebe6df;
 }
 
 @theme inline {
-  --color-ink: var(--ink);
-  --color-paper: var(--paper);
-  --color-paper-deep: var(--paper-deep);
-  --color-stone: var(--stone);
-  --color-stone-light: var(--stone-light);
-  --color-clay: var(--clay);
-  --color-clay-soft: var(--clay-soft);
-  --color-night: var(--night);
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-figtree), system-ui, sans-serif;
   --font-serif: var(--font-fraunces), Georgia, serif;
 }
@@ -35,22 +37,22 @@ html {
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-figtree), system-ui, sans-serif;
 }
 
 ::selection {
-  background: var(--clay-soft);
-  color: var(--ink);
+  background: var(--accent-soft);
+  color: var(--foreground);
 }
 
 .fade-in-view {
   opacity: 0;
-  transform: translateY(1rem);
+  transform: translateY(1.25rem);
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-in-view.is-visible {

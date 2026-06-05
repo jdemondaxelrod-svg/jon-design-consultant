@@ -55,7 +55,9 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${figtree.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-ink">{children}</body>
+      <body className="min-h-full flex flex-col text-foreground">
+        {children}
+      </body>
     </html>
   );
 }
