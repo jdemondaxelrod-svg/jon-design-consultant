@@ -9,7 +9,7 @@ const currentRoles = [
     role: "The Clintonville Handyman",
     title: "Owner & Residential Remodeling Consultant",
     detail:
-      "Operate a residential remodeling, repair, and accessibility services company serving Central Ohio. 120+ homeowners served, nearly 200 documented opportunities, and 500+ repair, remodeling, accessibility, and home-improvement tasks delivered. Full ownership of consultation, estimating, scheduling, procurement, project management, invoicing, and business operations.",
+      "Operate a residential remodeling, repair, and accessibility services company serving Central Ohio. 120+ homeowners served. Full ownership of consultation, estimating, scheduling, procurement, project management, invoicing, and business operations.",
   },
   {
     period: periods.elianeDesign,

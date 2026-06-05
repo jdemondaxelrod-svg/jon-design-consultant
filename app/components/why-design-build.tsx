@@ -35,8 +35,8 @@ export function WhyDesignBuild() {
               <p>
                 Operating The Clintonville Handyman gave me end-to-end
                 accountability — consultations, estimates, procurement, project
-                management, invoicing, and on-site problem-solving across 500+
-                residential tasks. That discipline is directly transferable to
+                management, invoicing, and on-site problem-solving for 120+
+                homeowners. That discipline is directly transferable to
                 design and remodeling teams: clarify the goal, understand the
                 constraints, communicate honestly, and translate ideas into
                 buildable scope.

@@ -8,7 +8,7 @@ const capabilities = [
   },
   {
     title: "Document the existing",
-    body: "On-site measurement, diagnostics, condition assessment, and home problem-solving from 500+ residential repair, remodeling, accessibility, and improvement tasks.",
+    body: "On-site measurement, diagnostics, condition assessment, and home problem-solving across residential repair, remodeling, accessibility, and improvement work.",
   },
   {
     title: "Plan & solve",

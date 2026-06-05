@@ -3,8 +3,6 @@ import { FadeIn } from "./fade-in";
 
 const metrics = [
   { value: "120+", label: "Homeowners served" },
-  { value: "~200", label: "Customer opportunities" },
-  { value: "500+", label: "Residential tasks delivered" },
   { value: "5★", label: "Customer reputation" },
 ];
 
@@ -20,7 +18,7 @@ export function ImpactMetrics() {
             The Clintonville Handyman · Central Ohio · {periods.clintonvilleHandyman}
           </p>
         </FadeIn>
-        <ul className="grid grid-cols-2 gap-10 md:grid-cols-4 md:gap-8">
+        <ul className="grid grid-cols-2 gap-10 md:gap-8">
           {metrics.map((metric, index) => (
             <FadeIn key={metric.label} delay={80 + index * 60}>
               <li>

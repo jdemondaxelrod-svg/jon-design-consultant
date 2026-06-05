@@ -36,9 +36,8 @@ export function Story() {
               <p>
                 I own and operate The Clintonville Handyman, a residential
                 remodeling, repair, and accessibility services company serving
-                homeowners throughout Central Ohio. Through a documented
-                pipeline of nearly 200 customer opportunities and more than 500
-                delivered tasks, I have developed practical expertise in
+                homeowners throughout Central Ohio. Working directly with 120+
+                homeowners, I have developed practical expertise in
                 homeowner consultation, project scoping, estimating, construction
                 problem-solving, accessibility planning, and business operations.
               </p>

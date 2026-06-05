@@ -8,7 +8,7 @@ const ventures = [
     title: "The Clintonville Handyman",
     subtitle: "Owner & Residential Remodeling Consultant",
     description:
-      "Residential remodeling, repair, and accessibility services company serving homeowners throughout Central Ohio. 120+ homeowners served, nearly 200 documented opportunities, and 500+ tasks spanning carpentry, drywall, painting, doors, trim, accessibility modifications, siding, fixtures, plumbing, electrical work, and home diagnostics.",
+      "Residential remodeling, repair, and accessibility services company serving homeowners throughout Central Ohio. 120+ homeowners served across carpentry, drywall, painting, doors, trim, accessibility modifications, siding, fixtures, plumbing, electrical work, and home diagnostics.",
     period: periods.clintonvilleHandyman,
   },
   {
