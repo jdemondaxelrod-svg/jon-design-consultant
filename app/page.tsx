@@ -1,5 +1,4 @@
 import { Contact } from "./components/contact";
-import { ExperienceIntersects } from "./components/experience-intersects";
 import { ExperienceSnapshot } from "./components/experience-snapshot";
 import { Hero } from "./components/hero";
 import { LearnedInsideHomes } from "./components/learned-inside-homes";
@@ -21,7 +20,6 @@ export default function Home() {
         <WhatIBring />
         <ProofFromField />
         <WhatHomeownersValue />
-        <ExperienceIntersects />
         <LearnedInsideHomes />
         <ExperienceSnapshot />
         <WhyDaveFox />

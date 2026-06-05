@@ -1,3 +1,5 @@
+import { periods } from "./career";
+
 export const hero = {
   headline:
     "Design, construction, and customer experience — brought together through real residential work.",
@@ -33,7 +35,7 @@ export const whatIBring = [
   },
   {
     title: "Customer Experience & Product Thinking",
-    body: "Product and digital experience leadership at Soft Surroundings and Scotts Miracle-Gro — specification, prioritization, customer journey design, and cross-functional execution at national consumer brands.",
+    body: "Measurable results at Soft Surroundings (+15% site conversion, +24% mobile) and Scotts Miracle-Gro (BonniePlants.com launch, 3× Scottsprogram.com growth, $1M Amazon program at 5:1 ROAS).",
   },
 ] as const;
 
@@ -161,28 +163,40 @@ export const homeownerFeedback = {
   ],
 } as const;
 
-export const experienceIntersects = {
-  title: "Where experience intersects",
-  intersections: [
-    "The intersection of sales and service.",
-    "The intersection of design and function.",
-    "The intersection of strategy and execution.",
-    "The intersection of customer experience and construction.",
-  ],
-  closing: [
-    "Over time, I've learned that many of the same skills apply whether you're helping a professor select course materials, developing a partnership with a national brand, improving an ecommerce experience, or helping a homeowner make decisions about their home.",
-    "The context changes.",
-    "The principles do not.",
-    "That perspective shapes how I approach every project today.",
-  ],
-} as const;
-
 export const learnedInsideHomes = [
   "Homeowners need guidance, not just options.",
   "Trust is built before a project is sold.",
   "Good design reduces anxiety.",
   "Accessibility should feel beautiful, not clinical.",
   "Communication is part of the craft.",
+] as const;
+
+export const experienceSnapshot = [
+  {
+    org: "The Clintonville Handyman",
+    title: "Owner & Residential Remodeling Consultant",
+    period: periods.clintonvilleHandyman,
+  },
+  {
+    org: "Éliane Design",
+    title: "Founder",
+    period: periods.elianeDesign,
+  },
+  {
+    org: "The Karole Foundation",
+    title: "Founder",
+    period: periods.karoleFoundation,
+  },
+  {
+    org: "Soft Surroundings / Scotts Miracle-Gro",
+    title: "Product & Customer Experience Leadership",
+    period: `${periods.softSurroundings} · ${periods.scottsProductOwner}`,
+  },
+  {
+    org: "eMusic / 7digital / Prentice Hall / McGraw-Hill",
+    title: "Consultative Sales & Business Development",
+    period: `${periods.prenticeHallInside} – ${periods.emusic}`,
+  },
 ] as const;
 
 export const whyDaveFox = {

@@ -1,7 +1,7 @@
 /** Career dates aligned with resume (en-dash format). */
 
 export const career = {
-  clintonvilleHandyman: { start: 2024, end: null as number | null },
+  clintonvilleHandyman: { start: 2022, end: null as number | null },
   elianeDesign: { start: 2026, end: null },
   karoleFoundation: { start: 2026, end: null },
   softSurroundings: { start: 2022, end: 2023 },
