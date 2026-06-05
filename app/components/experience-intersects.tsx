@@ -1,7 +1,5 @@
 import { experienceIntersects } from "../lib/content";
 import { FadeIn } from "./fade-in";
-import { SectionLabel } from "./section-label";
-
 export function ExperienceIntersects() {
   return (
     <section
@@ -11,20 +9,15 @@ export function ExperienceIntersects() {
     >
       <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <SectionLabel>{experienceIntersects.title}</SectionLabel>
-          <div className="mt-6 max-w-3xl space-y-4">
-            {experienceIntersects.opening.map((line) => (
-              <p
-                key={line}
-                className="font-serif text-[clamp(1.35rem,2.8vw,2rem)] leading-[1.35] text-foreground"
-              >
-                {line}
-              </p>
-            ))}
-          </div>
+          <h2
+            id="intersections-heading"
+            className="font-sans text-[0.65rem] tracking-[0.2em] text-foreground-subtle uppercase"
+          >
+            {experienceIntersects.title}
+          </h2>
         </FadeIn>
 
-        <ul className="mt-14 divide-y divide-border border-t border-border">
+        <ul className="mt-10 divide-y divide-border border-t border-border">
           {experienceIntersects.intersections.map((line, index) => (
             <FadeIn key={line} delay={index * 60}>
               <li className="py-7 font-serif text-lg leading-snug text-foreground md:py-8 md:text-xl">

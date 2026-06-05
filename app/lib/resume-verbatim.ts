@@ -1,3 +1,5 @@
+import { periods } from "./career";
+
 /** Verbatim resume copy from DeMond Axelrod Resume - Design & Build (5).pdf */
 
 export const resumeHeader = {
@@ -44,7 +46,7 @@ export const resumeExperience: readonly ResumeRole[] = [
     org: "The Clintonville Handyman",
     location: "Columbus, Ohio",
     title: "Owner & Residential Remodeling Consultant",
-    period: "2022–Present",
+    period: periods.clintonvilleHandyman,
     intro:
       "Operate a residential remodeling, repair, and accessibility services company serving homeowners throughout Central Ohio.",
     bullets: [

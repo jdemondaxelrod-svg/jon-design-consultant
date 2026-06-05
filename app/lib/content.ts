@@ -220,10 +220,6 @@ export const homeownerFeedback = {
 
 export const experienceIntersects = {
   title: "Where experience intersects",
-  opening: [
-    "The most important lessons in my career didn't come from staying in one lane.",
-    "They came from working at the intersections.",
-  ],
   intersections: [
     "The intersection of sales and service.",
     "The intersection of design and function.",
