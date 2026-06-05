@@ -1,29 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf8f5;
-  --background-alt: #f3f0eb;
-  --foreground: #2a2826;
-  --foreground-muted: #5c5650;
-  --foreground-subtle: #8a837a;
-  --border: #e5e0d8;
-  --border-strong: #d4cdc3;
-  --accent: #6b5d52;
-  --accent-soft: #ebe6df;
+  --ink: #12100e;
+  --paper: #f6f2ec;
+  --paper-deep: #ede8e0;
+  --stone: #6f6860;
+  --stone-light: #9a9288;
+  --clay: #b4532e;
+  --clay-soft: #e8d5cc;
+  --night: #1a1714;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-background-alt: var(--background-alt);
-  --color-foreground: var(--foreground);
-  --color-foreground-muted: var(--foreground-muted);
-  --color-foreground-subtle: var(--foreground-subtle);
-  --color-border: var(--border);
-  --color-border-strong: var(--border-strong);
-  --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-stone: var(--stone);
+  --color-stone-light: var(--stone-light);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --color-night: var(--night);
+  --font-sans: var(--font-figtree), system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
 }
 
 html {
@@ -37,87 +35,22 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-figtree), system-ui, sans-serif;
 }
 
 ::selection {
-  background: var(--accent-soft);
-  color: var(--foreground);
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(1.25rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes line-grow {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.animate-fade-in {
-  animation: fade-in 1.2s ease forwards;
-}
-
-.animate-line-grow {
-  animation: line-grow 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  transform-origin: left;
-}
-
-.animation-delay-100 {
-  animation-delay: 100ms;
-}
-.animation-delay-200 {
-  animation-delay: 200ms;
-}
-.animation-delay-300 {
-  animation-delay: 300ms;
-}
-.animation-delay-400 {
-  animation-delay: 400ms;
-}
-.animation-delay-500 {
-  animation-delay: 500ms;
-}
-.animation-delay-600 {
-  animation-delay: 600ms;
-}
-
-.opacity-0-initial {
-  opacity: 0;
+  background: var(--clay-soft);
+  color: var(--ink);
 }
 
 .fade-in-view {
   opacity: 0;
-  transform: translateY(1.5rem);
+  transform: translateY(1.25rem);
   transition:
-    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-in-view.is-visible {
@@ -126,14 +59,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-up,
-  .animate-fade-in,
-  .animate-line-grow {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-
   .fade-in-view {
     opacity: 1;
     transform: none;
