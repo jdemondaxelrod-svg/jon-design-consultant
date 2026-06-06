@@ -1,5 +1,4 @@
 import { Contact } from "./components/contact";
-import { OneFinalThought } from "./components/one-final-thought";
 import { ExperienceSnapshot } from "./components/experience-snapshot";
 import { Hero } from "./components/hero";
 import { LearnedInsideHomes } from "./components/learned-inside-homes";
@@ -24,7 +23,6 @@ export default function Home() {
         <LearnedInsideHomes />
         <ExperienceSnapshot />
         <WhyDaveFox />
-        <OneFinalThought />
         <Contact />
       </main>
       <SiteFooter />
