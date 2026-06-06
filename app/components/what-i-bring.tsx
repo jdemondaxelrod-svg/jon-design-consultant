@@ -1,4 +1,4 @@
-import { whatIBring } from "../lib/content";
+import { whatIBring, whatIBringLead } from "../lib/content";
 import { FadeIn } from "./fade-in";
 import { SectionLabel } from "./section-label";
 
@@ -16,7 +16,7 @@ export function WhatIBring() {
             id="bring-heading"
             className="mt-4 max-w-2xl font-serif text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.15] font-medium tracking-[-0.02em] text-foreground"
           >
-            An unusual combination — by design.
+            {whatIBringLead}
           </h2>
         </FadeIn>
 

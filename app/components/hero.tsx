@@ -25,9 +25,16 @@ export function Hero() {
           aria-hidden
         />
 
-        <p className="max-w-3xl font-sans text-base leading-relaxed text-foreground-muted md:text-lg">
-          {hero.subtext}
-        </p>
+        <div className="max-w-3xl space-y-5 md:space-y-6">
+          {hero.body.map((paragraph) => (
+            <p
+              key={paragraph}
+              className="font-sans text-base leading-relaxed text-foreground-muted md:text-lg"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
 
         <div className="mt-12 flex flex-wrap gap-4">
           <a

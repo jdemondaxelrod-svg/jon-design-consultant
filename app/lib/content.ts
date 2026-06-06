@@ -3,8 +3,11 @@ import { periods } from "./career";
 export const hero = {
   headline:
     "Design, construction, and customer experience — brought together through real residential work.",
-  subtext:
-    "I'm Jon DeMond-Axelrod, a residential remodeling consultant, business owner, and customer experience leader in Columbus, Ohio. I built The Clintonville Handyman, founded Éliane Design and The Karole Foundation, and am interested in bringing that unusual mix of sales, design, product thinking, and hands-on residential experience to Dave Fox.",
+  body: [
+    "I'm Jon DeMond-Axelrod, owner of The Clintonville Handyman and founder of Éliane Design and The Karole Foundation.",
+    "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, and adapt the places they call home.",
+    "Before entering residential services, I spent twenty-five years helping customers make important decisions in education, publishing, technology, and consumer brands. I'm interested in bringing that experience—and a genuine appreciation for homes and the people who live in them—to Dave Fox.",
+  ],
 } as const;
 
 export const whyThisRole = {
@@ -20,22 +23,25 @@ export const whyThisRole = {
   ],
 } as const;
 
+export const whatIBringLead =
+  "Four perspectives that shape how I work with homeowners." as const;
+
 export const whatIBring = [
   {
     title: "Homeowner Trust",
-    body: "120+ Central Ohio homeowners served through a referral-driven, five-star practice. I know how to earn confidence before a project is sold.",
+    body: "More than 120 homeowners have trusted me with repairs, improvements, accessibility projects, and decisions about their homes. I've learned how to listen carefully, earn confidence, and build relationships that extend beyond a single project.",
   },
   {
     title: "Consultative Sales",
-    body: "Twenty-five years qualifying needs, listening carefully, and closing complex decisions — from educational publishing and national brand partnerships to residential remodeling consultation.",
+    body: "For twenty-five years, I've helped customers evaluate options, navigate complexity, and make important decisions. From higher education and publishing to consumer brands and residential services, the process has always started with understanding what matters most.",
   },
   {
     title: "Residential Field Experience",
-    body: "Owner-operated remodeling practice with hands-on accountability: consultation, measurement, scoping, estimating, procurement, and on-site problem-solving.",
+    body: "As owner of The Clintonville Handyman, I've personally managed consultation, measurement, estimating, procurement, project coordination, and on-site problem solving. I've learned how projects unfold inside real homes—with real constraints, budgets, and priorities.",
   },
   {
-    title: "Customer Experience & Product Thinking",
-    body: "Measurable results at Soft Surroundings (+15% site conversion, +24% mobile) and Scotts Miracle-Gro (BonniePlants.com launch, 3× Scottsprogram.com growth, $1M Amazon program at 5:1 ROAS).",
+    title: "Systems Thinking",
+    body: "My background in product management and customer experience taught me to look beyond individual tasks and understand how the pieces fit together. Homes work the same way. Good decisions require balancing function, aesthetics, cost, sequencing, and the homeowner's goals.",
   },
 ] as const;
 
