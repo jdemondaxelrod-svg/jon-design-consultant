@@ -174,9 +174,9 @@ export function OneFinalThoughtExperience({
               <p
                 key={line}
                 className={`font-serif font-medium tracking-[-0.02em] text-foreground ${
-                  index === 2
+                  index === 3
                     ? "pt-3 font-sans text-sm text-foreground-subtle"
-                    : index === 1
+                    : index === 2
                       ? "text-[clamp(1.75rem,4.5vw,2.75rem)] leading-[1.12]"
                       : "text-[clamp(1.2rem,3vw,1.75rem)] leading-[1.3] text-foreground-muted"
                 }`}
