@@ -35,7 +35,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <Link
-          href="/resume"
+          href={siteConfig.resumeHref}
           className="font-sans text-[0.65rem] tracking-[0.14em] text-foreground-muted uppercase transition-colors hover:text-foreground"
         >
           Resume

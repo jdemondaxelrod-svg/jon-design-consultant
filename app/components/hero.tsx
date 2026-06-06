@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { hero } from "../lib/content";
 import { siteConfig } from "../lib/site";
 
@@ -31,12 +30,12 @@ export function Hero() {
         </p>
 
         <div className="mt-12 flex flex-wrap gap-4">
-          <Link
-            href={siteConfig.resumePath}
+          <a
+            href={siteConfig.resumeAnchor}
             className="inline-flex items-center border border-foreground/20 bg-foreground px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-background uppercase transition-colors hover:bg-foreground-muted"
           >
             View Resume
-          </Link>
+          </a>
           <a
             href="#contact"
             className="inline-flex items-center border border-border-strong px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-foreground uppercase transition-colors hover:border-foreground hover:text-foreground"

@@ -1,4 +1,5 @@
 import { Contact } from "./components/contact";
+import { ResumeSection } from "./components/resume-section";
 import { ExperienceSnapshot } from "./components/experience-snapshot";
 import { Hero } from "./components/hero";
 import { LearnedInsideHomes } from "./components/learned-inside-homes";
@@ -24,6 +25,7 @@ export default function Home() {
         <ExperienceSnapshot />
         <WhyDaveFox />
         <Contact />
+        <ResumeSection />
       </main>
       <SiteFooter />
     </>

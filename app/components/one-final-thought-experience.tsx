@@ -225,7 +225,7 @@ export function OneFinalThoughtExperience({
               Contact Jon
             </Link>
             <Link
-              href="/resume"
+              href="/#resume"
               className="inline-flex items-center border border-border-strong px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-foreground uppercase transition-colors hover:border-foreground"
             >
               View Resume

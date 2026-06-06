@@ -17,6 +17,8 @@ export const siteConfig = {
   location: "Columbus, Ohio",
   locale: "en_US",
   resumePath: "/resume",
+  resumeAnchor: "#resume",
+  resumeHref: "/#resume",
   resumeFilename: "Jon-DeMond-Axelrod-Resume.pdf",
   targetCompany: "Dave Fox Design Build Remodelers",
   targetRole: "Residential Design Consultant",

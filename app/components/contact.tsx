@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { siteConfig } from "../lib/site";
 import { FadeIn } from "./fade-in";
 import { SectionLabel } from "./section-label";
@@ -27,12 +26,12 @@ export function Contact() {
 
         <FadeIn delay={100}>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              href={siteConfig.resumePath}
+            <a
+              href={siteConfig.resumeAnchor}
               className="inline-flex items-center border border-foreground/20 bg-foreground px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-background uppercase transition-colors hover:bg-foreground-muted"
             >
               View Resume
-            </Link>
+            </a>
           </div>
 
           <div className="mt-14 flex flex-col gap-4 sm:flex-row sm:gap-12">

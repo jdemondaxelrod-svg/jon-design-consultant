@@ -99,4 +99,9 @@ body {
   @page {
     margin: 0.75in;
   }
+
+  /* Homepage: print only the embedded resume section */
+  main:has(#resume) > :not(#resume) {
+    display: none !important;
+  }
 }
