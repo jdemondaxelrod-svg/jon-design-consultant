@@ -203,3 +203,35 @@ export const whyDaveFox = {
   lead: "I am not a traditional candidate. That is the point.",
   body: "I bring the ability to sit with homeowners, understand what they really want, translate goals into practical solutions, communicate tradeoffs clearly, and stay grounded in the realities of construction. Dave Fox is where that combination belongs.",
 } as const;
+
+export const oneFinalThought = {
+  title: "One Final Thought",
+  frames: [
+    "I don't believe people hire remodelers because they want new cabinets.",
+    "Or new flooring.",
+    "Or a bigger shower.",
+    "They hire remodelers because they believe life could be better than it is today.",
+    "More comfortable.",
+    "More beautiful.",
+    "More functional.",
+    "More connected.",
+    "More welcoming.",
+    "More them.",
+    "At its best, remodeling is an act of hope.",
+    "Someone looks at the place where they live and decides to invest in a future that doesn't exist yet.",
+    "I've spent much of my career helping people make decisions about their futures.",
+    "In classrooms.",
+    "In businesses.",
+    "In brands.",
+    "And now, in homes.",
+    "That's why this work resonates with me.",
+    "Because in the end, it isn't really about construction.",
+    "It's about possibility.",
+    "— Jon DeMond-Axelrod",
+  ],
+  endLines: [
+    "Because in the end, it isn't really about construction.",
+    "It's about possibility.",
+    "— Jon DeMond-Axelrod",
+  ],
+} as const;
