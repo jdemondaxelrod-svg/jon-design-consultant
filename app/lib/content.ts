@@ -209,9 +209,13 @@ export const oneFinalThought = {
   frames: [
     "For twenty-five years,",
     "I've helped people make decisions.",
-    "In education.",
-    "In business.",
-    "And now, in homes.",
+    [
+      "In education.",
+      "In music.",
+      "In the lawn and garden.",
+      "In fashion.",
+      "And now, in homes.",
+    ],
     "The work has always been the same.",
     "Listening carefully.",
     "Understanding what matters.",

@@ -190,7 +190,9 @@ export const resumeClosingNote = {
   body: [
     "For twenty-five years, I've helped people make decisions.",
     "In education.",
-    "In business.",
+    "In music.",
+    "In the lawn and garden.",
+    "In fashion.",
     "And now, in homes.",
     "The work has always been the same.",
     "Listening carefully.",

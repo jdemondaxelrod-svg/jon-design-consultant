@@ -14,15 +14,24 @@ type OneFinalThoughtExperienceProps = {
 
 const FADE_MS = 1000;
 
-function frameHoldMs(text: string, reducedMotion: boolean) {
+type ThoughtFrame = (typeof oneFinalThought.frames)[number];
+
+function frameHoldMs(frame: ThoughtFrame, reducedMotion: boolean) {
+  if (Array.isArray(frame)) {
+    return reducedMotion ? 1800 : 5600;
+  }
   if (reducedMotion) return 1200;
-  if (text.length < 28) return 2400;
-  if (text.length < 72) return 3400;
+  if (frame.length < 28) return 2400;
+  if (frame.length < 72) return 3400;
   return 4600;
 }
 
-function frameSizeClass(text: string) {
-  return text.length < 28
+function frameSizeClass(frame: ThoughtFrame) {
+  const length = Array.isArray(frame)
+    ? Math.max(...frame.map((line) => line.length))
+    : frame.length;
+
+  return length < 28
     ? "text-[clamp(1.75rem,5vw,3.25rem)] leading-[1.15]"
     : "text-[clamp(1.25rem,3.5vw,2.25rem)] leading-[1.25]";
 }
@@ -150,15 +159,32 @@ export function OneFinalThoughtExperience({
           aria-live="polite"
           aria-atomic="true"
         >
-          <p
-            key={`${frameIndex}-${currentFrame}`}
-            className={`max-w-3xl font-serif font-medium tracking-[-0.02em] text-foreground transition-all ease-[cubic-bezier(0.22,1,0.36,1)] ${frameSizeClass(currentFrame)} ${transitionClass}`}
+          <div
+            key={frameIndex}
+            className={`max-w-3xl transition-all ease-[cubic-bezier(0.22,1,0.36,1)] ${transitionClass}`}
             style={{
               transitionDuration: reducedMotion ? "300ms" : "1000ms",
             }}
           >
-            {currentFrame}
-          </p>
+            {Array.isArray(currentFrame) ? (
+              <div className="space-y-3 md:space-y-4">
+                {currentFrame.map((line) => (
+                  <p
+                    key={line}
+                    className={`font-serif font-medium tracking-[-0.02em] text-foreground ${frameSizeClass(currentFrame)}`}
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p
+                className={`font-serif font-medium tracking-[-0.02em] text-foreground ${frameSizeClass(currentFrame)}`}
+              >
+                {currentFrame}
+              </p>
+            )}
+          </div>
         </div>
       ) : null}
 
