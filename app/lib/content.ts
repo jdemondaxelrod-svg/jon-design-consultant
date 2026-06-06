@@ -40,10 +40,30 @@ export const whatIBring = [
 ] as const;
 
 export const fieldProof = [
-  { value: "120+", label: "Homeowners served" },
-  { value: "~200", label: "Documented customer opportunities" },
-  { value: "500+", label: "Residential repair, remodeling & accessibility tasks" },
-  { value: "5★", label: "Customer reputation" },
+  {
+    value: "120+",
+    label: "Homeowners Served",
+    detail:
+      "Personally guided more than 120 homeowners from first conversation to final walkthrough.",
+  },
+  {
+    value: "500+",
+    label: "Projects & Tasks",
+    detail:
+      "Big projects. Small projects. And everything in between. More than 500 opportunities to learn how homes — and homeowners — work.",
+  },
+  {
+    value: "25+",
+    label: "Trades & Systems",
+    detail:
+      "Homes are systems. Working across more than 25 trades and project categories has taught me how the pieces fit together.",
+  },
+  {
+    value: "5★",
+    label: "Customer Reputation",
+    detail:
+      "34 verified five-star reviews. More importantly, homeowners keep calling back.",
+  },
 ] as const;
 
 export const fieldProofNote =
