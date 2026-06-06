@@ -6,6 +6,7 @@ import {
   resumeProfile,
 } from "../lib/resume-verbatim";
 import { siteConfig } from "../lib/site";
+import { ResumeClosingNote } from "./resume-closing-note";
 import { ResumePrintButton } from "./resume-print-button";
 import { ResumeSectionLabel } from "./resume-section-label";
 
@@ -123,6 +124,8 @@ export function ResumePageContent() {
           {resumeEducation.degree}
         </p>
       </section>
+
+      <ResumeClosingNote />
 
       <div className="mt-14 flex flex-wrap items-center gap-4 border-t border-border pt-10 print:hidden">
         <ResumePrintButton />
