@@ -7,7 +7,7 @@ export function ProofFromField() {
   return (
     <section
       id="proof"
-      className="overflow-x-clip border-y border-border bg-background-alt py-20 md:py-24"
+      className="border-y border-border bg-background-alt py-20 md:py-24"
       aria-labelledby="proof-heading"
     >
       <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-16">
@@ -15,7 +15,7 @@ export function ProofFromField() {
           <SectionLabel>Proof from the field</SectionLabel>
           <h2
             id="proof-heading"
-            className="mt-4 break-words font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.15] font-medium tracking-[-0.02em] text-foreground"
+            className="mt-4 font-serif text-[clamp(1.75rem,3.5vw,2.5rem)] leading-[1.15] font-medium tracking-[-0.02em] text-foreground"
           >
             The Clintonville Handyman · Central Ohio ·{" "}
             {periods.clintonvilleHandyman}
@@ -44,7 +44,7 @@ export function ProofFromField() {
                 <div
                   id={`proof-detail-${index}`}
                   role="tooltip"
-                  className="pointer-events-none absolute top-full left-0 z-10 mt-4 hidden w-full max-w-[calc(100vw-3rem)] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100 md:left-1/2 md:block md:w-[14rem] md:max-w-none md:-translate-x-1/2"
+                  className="pointer-events-none absolute top-full left-0 z-10 mt-4 w-full min-w-[12rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100 md:left-1/2 md:w-[14rem] md:-translate-x-1/2"
                 >
                   <p className="border border-border-strong bg-background px-4 py-3 font-sans text-xs leading-relaxed text-foreground-muted shadow-[0_8px_24px_rgba(42,40,38,0.08)]">
                     {stat.detail}
