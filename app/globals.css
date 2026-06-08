@@ -111,24 +111,6 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .hero-context-line-0 {
-    animation-delay: 0ms !important;
-  }
-
-  .hero-context-line-1 {
-    animation-delay: 280ms !important;
-  }
-
-  .hero-context-line-2 {
-    animation-delay: 560ms !important;
-  }
-
-  #hero-name.hero-eyebrow-line {
-    animation-delay: 840ms !important;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;

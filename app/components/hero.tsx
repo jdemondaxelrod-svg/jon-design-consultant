@@ -1,12 +1,9 @@
-import { Fragment } from "react";
 import { hero } from "../lib/content";
 import { siteConfig } from "../lib/site";
 
-const heroEyebrowItems = [
-  "Application",
-  siteConfig.targetRole,
-  siteConfig.targetCompany,
-] as const;
+const [heroLead, ...heroSupporting] = hero.body;
+
+const heroApplicationLine = `Application for ${siteConfig.targetRole}, ${siteConfig.targetCompany}`;
 
 export function Hero() {
   return (
@@ -16,61 +13,59 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
-        <div className="mb-8 flex flex-col-reverse gap-6 md:flex-col md:gap-0">
+        <div className="hero-intro max-w-4xl">
           <p
             id="hero-name"
-            className="hero-eyebrow-line mb-0 font-serif text-[clamp(1.875rem,7vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground md:mb-8"
+            className="hero-eyebrow-line font-serif text-[clamp(1.75rem,6vw,2.25rem)] leading-tight font-medium tracking-[-0.02em] text-foreground"
             style={{ animationDelay: "0ms" }}
           >
             {siteConfig.name}
           </p>
 
-          <div
-            className="flex max-w-full flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] break-words text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
-            aria-label={`Application for ${siteConfig.targetRole} at ${siteConfig.targetCompany}`}
+          <h1
+            id="hero-heading"
+            className="hero-eyebrow-line mt-2 max-w-3xl font-serif text-[clamp(1.625rem,5.75vw,4.25rem)] leading-[1.12] font-medium tracking-[-0.02em] text-foreground md:mt-3"
+            style={{ animationDelay: "280ms" }}
           >
-            {heroEyebrowItems.map((item, index) => (
-              <Fragment key={item}>
-                {index > 0 ? (
-                  <span className="mx-2 hidden md:inline" aria-hidden>
-                    ·
-                  </span>
-                ) : null}
-                <span
-                  className={`hero-eyebrow-line hero-context-line-${index}`}
-                  style={{ animationDelay: `${350 + index * 280}ms` }}
-                >
-                  {item}
-                </span>
-              </Fragment>
-            ))}
-          </div>
+            {hero.headline}
+          </h1>
         </div>
 
-        <h1
-          id="hero-heading"
-          className="max-w-4xl font-serif text-[clamp(2.25rem,5.5vw,4.25rem)] leading-[1.1] font-medium tracking-[-0.02em] text-foreground"
+        <p
+          className="hero-eyebrow-line mt-6 max-w-3xl font-sans text-sm leading-relaxed text-foreground-subtle md:mt-8 md:text-[0.95rem]"
+          style={{ animationDelay: "560ms" }}
         >
-          {hero.headline}
-        </h1>
+          {heroApplicationLine}
+        </p>
 
-        <div
-          className="my-10 h-px w-full max-w-xl bg-border-strong md:my-14"
-          aria-hidden
-        />
+        <p
+          className="hero-eyebrow-line mt-6 max-w-3xl font-sans text-base leading-relaxed text-foreground-muted md:mt-8 md:text-lg"
+          style={{ animationDelay: "840ms" }}
+        >
+          {heroLead}
+        </p>
 
-        <div className="max-w-3xl space-y-5 md:space-y-6">
-          {hero.body.map((paragraph) => (
-            <p
-              key={paragraph}
-              className="font-sans text-base leading-relaxed text-foreground-muted md:text-lg"
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        {heroSupporting.length > 0 ? (
+          <>
+            <div
+              className="my-8 h-px w-full max-w-xl bg-border-strong md:my-14"
+              aria-hidden
+            />
 
-        <div className="mt-12 flex flex-wrap gap-4">
+            <div className="max-w-3xl space-y-5 md:space-y-6">
+              {heroSupporting.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="font-sans text-base leading-relaxed text-foreground-muted md:text-lg"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </>
+        ) : null}
+
+        <div className="mt-10 flex flex-wrap gap-4 md:mt-12">
           <a
             href={siteConfig.resumeAnchor}
             className="inline-flex items-center border border-foreground/20 bg-foreground px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-background uppercase transition-colors hover:bg-foreground-muted"
