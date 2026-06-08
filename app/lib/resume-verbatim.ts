@@ -12,22 +12,22 @@ export const resumeHeader = {
 } as const;
 
 export const resumeProfile = [
-  "Entrepreneur, residential remodeling consultant, and customer experience leader focused on the intersection of home, design, accessibility, and aging-in-place.",
-  "Owner of The Clintonville Handyman, a residential remodeling and repair company serving homeowners throughout Central Ohio. Founder of Éliane Design and The Karole Foundation, organizations focused on accessibility, aging-in-place, and helping people remain safe and independent at home.",
+  "Consultative sales professional, business builder, and homeowner services operator with a passion for helping people improve the places they call home.",
+  "Owner of The Clintonville Handyman, a homeowner services business focused on repairs, improvements, accessibility, and practical problem solving. Founder of Éliane Design and The Karole Foundation, organizations focused on accessibility, aging-in-place, and helping people remain safe and independent at home.",
   "Combines hands-on construction experience, consultative sales expertise, and a background in product strategy, customer experience, and business development to help homeowners navigate complex decisions and create environments that are functional, beautiful, and built around how people actually live.",
 ] as const;
 
 export const resumeCoreStrengths = [
-  "Residential Design Consultation",
-  "Remodeling & Home Improvement",
+  "Vision Development & Decision Support",
+  "Residential Systems & Home Improvement",
   "Consultative Sales",
   "Project Scoping & Estimating",
-  "Customer Experience Strategy",
+  "Customer Experience",
   "Accessibility & Aging-in-Place",
   "Homeowner Communication",
   "Product Specification & Procurement",
   "Business Development",
-  "Vendor & Stakeholder Management",
+  "Consensus Building",
   "Project Management",
   "Cross-Functional Leadership",
 ] as const;
@@ -50,26 +50,12 @@ export const resumeExperience: readonly ResumeRole[] = [
     intro:
       "Operate a residential remodeling, repair, and accessibility services company serving homeowners throughout Central Ohio.",
     bullets: [
+      "Built The Clintonville Handyman from startup through local marketing, customer acquisition, and consultative sales",
+      "Built a referral-driven business supported by repeat customers, word-of-mouth recommendations, and 34 five-star reviews",
       "Served more than 120 homeowners through a documented pipeline of nearly 200 customer opportunities",
       "Scoped, estimated, and delivered more than 500 residential repair, remodeling, accessibility, and home-improvement tasks",
       "Managed projects spanning carpentry, drywall, painting, doors, trim, accessibility modifications, siding, fixtures, plumbing, electrical work, and home diagnostics",
       "Conduct all customer consultations, estimating, scheduling, procurement, project management, invoicing, and business operations",
-      "Built a referral-driven business generating substantial repeat and referral work while maintaining a five-star customer reputation",
-      "Developed specialized expertise in aging-in-place solutions, accessibility planning, and homeowner-centered problem solving",
-    ],
-  },
-  {
-    org: "Éliane Design",
-    location: "Columbus, Ohio",
-    title: "Founder",
-    period: periods.elianeDesign,
-    intro:
-      "Luxury accessibility and aging-in-place brand focused on integrating safety, mobility, and independence into beautiful residential environments.",
-    bullets: [
-      "Developed brand strategy, website, product catalog, content, and customer experience framework",
-      "Curated premium accessibility products, architectural hardware, grab bars, and aging-in-place solutions",
-      "Established manufacturer outreach and product sourcing strategy",
-      "Developed consultation and specification processes for residential accessibility projects",
     ],
   },
   {
@@ -82,7 +68,19 @@ export const resumeExperience: readonly ResumeRole[] = [
     bullets: [
       "Developed mission, strategic vision, website, and organizational framework",
       "Developed concepts and initiatives focused on helping individuals remain safe and independent at home",
-      "Developed community outreach and accessibility awareness initiatives",
+    ],
+  },
+  {
+    org: "Éliane Design",
+    location: "Columbus, Ohio",
+    title: "Founder",
+    period: periods.elianeDesign,
+    intro:
+      "Luxury accessibility and aging-in-place brand focused on integrating safety, mobility, and independence into beautiful residential environments.",
+    bullets: [
+      "Developed a design philosophy centered on integrating accessibility, safety, and independence into beautiful residential environments",
+      "Researched luxury residential brands, accessibility products, and aging-in-place solutions to better understand how design and function can coexist",
+      "Developed consultation and specification frameworks focused on helping homeowners navigate accessibility and aging-in-place decisions",
     ],
   },
   {

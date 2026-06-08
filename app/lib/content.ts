@@ -2,7 +2,7 @@ import { career, formatPeriod, periods } from "./career";
 
 export const hero = {
   headline:
-    "Design, construction, and customer experience — brought together through real residential work.",
+    "Helping people build the life they want, one home at a time.",
   body: [
     "I'm Jon DeMond-Axelrod, owner of The Clintonville Handyman and founder of Éliane Design and The Karole Foundation.",
     "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, and adapt the places they call home.",
