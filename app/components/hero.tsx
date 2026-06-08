@@ -16,33 +16,35 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
-        <p
-          id="hero-name"
-          className="hero-eyebrow-line mb-6 font-serif text-[clamp(1.875rem,7vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground md:mb-8"
-          style={{ animationDelay: "0ms" }}
-        >
-          {siteConfig.name}
-        </p>
+        <div className="mb-8 flex flex-col-reverse gap-6 md:flex-col md:gap-0">
+          <p
+            id="hero-name"
+            className="hero-eyebrow-line mb-0 font-serif text-[clamp(1.875rem,7vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground md:mb-8"
+            style={{ animationDelay: "0ms" }}
+          >
+            {siteConfig.name}
+          </p>
 
-        <div
-          className="mb-8 flex max-w-full flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] break-words text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
-          aria-label={`Application for ${siteConfig.targetRole} at ${siteConfig.targetCompany}`}
-        >
-          {heroEyebrowItems.map((item, index) => (
-            <Fragment key={item}>
-              {index > 0 ? (
-                <span className="mx-2 hidden md:inline" aria-hidden>
-                  ·
+          <div
+            className="flex max-w-full flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] break-words text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
+            aria-label={`Application for ${siteConfig.targetRole} at ${siteConfig.targetCompany}`}
+          >
+            {heroEyebrowItems.map((item, index) => (
+              <Fragment key={item}>
+                {index > 0 ? (
+                  <span className="mx-2 hidden md:inline" aria-hidden>
+                    ·
+                  </span>
+                ) : null}
+                <span
+                  className={`hero-eyebrow-line hero-context-line-${index}`}
+                  style={{ animationDelay: `${350 + index * 280}ms` }}
+                >
+                  {item}
                 </span>
-              ) : null}
-              <span
-                className="hero-eyebrow-line"
-                style={{ animationDelay: `${350 + index * 280}ms` }}
-              >
-                {item}
-              </span>
-            </Fragment>
-          ))}
+              </Fragment>
+            ))}
+          </div>
         </div>
 
         <h1
