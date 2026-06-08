@@ -11,7 +11,7 @@ export function ExperienceSnapshot() {
     >
       <div className="mx-auto max-w-6xl">
         <FadeIn>
-          <SectionLabel>Experience snapshot</SectionLabel>
+          <SectionLabel>Experience</SectionLabel>
           <h2
             id="experience-heading"
             className="mt-4 max-w-2xl font-serif text-[clamp(1.75rem,3.5vw,2.75rem)] leading-[1.15] font-medium tracking-[-0.02em] text-foreground"
@@ -22,18 +22,20 @@ export function ExperienceSnapshot() {
 
         <ul className="mt-14 divide-y divide-border border-t border-border">
           {experienceSnapshot.map((entry, index) => (
-            <FadeIn key={entry.org} delay={index * 60}>
-              <li className="grid gap-2 py-8 md:grid-cols-[1fr_auto] md:items-baseline md:gap-8 md:py-10">
-                <div>
-                  <p className="font-sans text-base font-medium text-foreground md:text-lg">
-                    {entry.org}
-                  </p>
-                  <p className="mt-1 font-sans text-sm text-foreground-muted">
-                    {entry.title}
-                  </p>
+            <FadeIn key={`${entry.org}-${entry.period}`} delay={index * 60}>
+              <li className="py-8 md:py-10">
+                <div className="grid gap-2 md:grid-cols-[1fr_auto] md:items-baseline md:gap-8">
+                  <div>
+                    <p className="font-sans text-base font-medium text-foreground md:text-lg">
+                      {entry.org}
+                    </p>
+                    <p className="mt-1 font-sans text-sm text-foreground-muted">
+                      {entry.title} · {entry.period}
+                    </p>
+                  </div>
                 </div>
-                <p className="font-sans text-sm whitespace-nowrap text-foreground-subtle">
-                  {entry.period}
+                <p className="mt-5 max-w-3xl font-serif text-base leading-relaxed text-foreground md:text-[1.05rem]">
+                  {entry.mission}
                 </p>
               </li>
             </FadeIn>

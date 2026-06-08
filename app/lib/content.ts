@@ -1,4 +1,4 @@
-import { periods } from "./career";
+import { career, formatPeriod, periods } from "./career";
 
 export const hero = {
   headline:
@@ -28,20 +28,20 @@ export const whatIBringLead =
 
 export const whatIBring = [
   {
-    title: "Homeowner Trust",
-    body: "More than 120 homeowners have trusted me with repairs, improvements, accessibility projects, and decisions about their homes. I've learned how to listen carefully, earn confidence, and build relationships that extend beyond a single project.",
+    title: "Homeowner Perspective",
+    body: "More than 120 homeowners have trusted me with repairs, improvements, accessibility projects, and decisions about their homes.",
   },
   {
-    title: "Consultative Sales",
-    body: "For twenty-five years, I've helped customers evaluate options, navigate complexity, and make important decisions. From higher education and publishing to consumer brands and residential services, the process has always started with understanding what matters most.",
+    title: "Consultative Perspective",
+    body: "Twenty-five years helping customers evaluate options, navigate complexity, and make important decisions.",
   },
   {
-    title: "Residential Field Experience",
-    body: "As owner of The Clintonville Handyman, I've personally managed consultation, measurement, estimating, procurement, project coordination, and on-site problem solving. I've learned how projects unfold inside real homes—with real constraints, budgets, and priorities.",
+    title: "Field Perspective",
+    body: "Hands-on experience with consultation, measurement, estimating, procurement, project coordination, and on-site problem solving.",
   },
   {
-    title: "Systems Thinking",
-    body: "My background in product management and customer experience taught me to look beyond individual tasks and understand how the pieces fit together. Homes work the same way. Good decisions require balancing function, aesthetics, cost, sequencing, and the homeowner's goals.",
+    title: "Systems Perspective",
+    body: "A background in customer experience and product strategy that taught me to understand how decisions, details, and outcomes connect.",
   },
 ] as const;
 
@@ -200,28 +200,57 @@ export const learnedInsideHomes = [
 export const experienceSnapshot = [
   {
     org: "The Clintonville Handyman",
-    title: "Owner & Residential Remodeling Consultant",
+    title: "Owner",
     period: periods.clintonvilleHandyman,
-  },
-  {
-    org: "Éliane Design",
-    title: "Founder",
-    period: periods.elianeDesign,
+    mission:
+      "Helping homeowners understand what's possible, choose a practical path forward, and improve the places they call home.",
   },
   {
     org: "The Karole Foundation",
     title: "Founder",
     period: periods.karoleFoundation,
+    mission:
+      "Helping people and families make informed decisions about accessibility, safety, and independence at home—regardless of income.",
   },
   {
-    org: "Soft Surroundings / Scotts Miracle-Gro",
-    title: "Product & Customer Experience Leadership",
-    period: `${periods.softSurroundings} · ${periods.scottsProductOwner}`,
+    org: "Éliane Design",
+    title: "Founder",
+    period: periods.elianeDesign,
+    mission:
+      "Helping discerning homeowners balance beauty, functionality, and long-term livability.",
   },
   {
-    org: "eMusic / 7digital / Prentice Hall / McGraw-Hill",
-    title: "Consultative Sales & Business Development",
-    period: `${periods.prenticeHallInside} – ${periods.emusic}`,
+    org: "Soft Surroundings",
+    title: "Director of Product & Digital Experience",
+    period: periods.softSurroundings,
+    mission:
+      "Helping customers find clothing that reflected their individuality and personal style by designing online experiences that made shopping feel effortless, inspiring, and confidence-building.",
+  },
+  {
+    org: "Scotts Miracle-Gro",
+    title: "Product & Digital Experience Leadership",
+    period: formatPeriod(
+      career.scottsDigitalMarketing.start,
+      career.scottsProductOwner.end,
+    ),
+    mission:
+      "Helping homeowners turn uncertainty into confidence through education, inspiration, and practical lawn and garden advice.",
+  },
+  {
+    org: "eMusic / 7digital",
+    title: "Director, Business Development & Brand Partnerships",
+    period: periods.emusic,
+    mission: "Helping brands connect with customers through the power of music.",
+  },
+  {
+    org: "Pearson Education / McGraw-Hill / Prentice Hall",
+    title: "Consultative Sales & Product Leadership",
+    period: formatPeriod(
+      career.prenticeHallInside.start,
+      career.mcgrawHill.end,
+    ),
+    mission:
+      "Helping professors make confident decisions about the content, technology, and resources they used to support student success.",
   },
 ] as const;
 
