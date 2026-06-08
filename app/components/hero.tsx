@@ -9,8 +9,8 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
-        <p className="mb-8 font-sans text-[0.7rem] tracking-[0.22em] text-foreground-subtle uppercase">
-          Application · {siteConfig.targetRole} · {siteConfig.targetCompany}
+        <p className="mb-8 font-sans text-sm leading-relaxed text-foreground-subtle md:text-[0.95rem]">
+          Application for {siteConfig.targetRole}, {siteConfig.targetCompany}
         </p>
 
         <h1
