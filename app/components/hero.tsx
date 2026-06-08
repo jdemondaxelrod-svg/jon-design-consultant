@@ -1,5 +1,12 @@
+import { Fragment } from "react";
 import { hero } from "../lib/content";
 import { siteConfig } from "../lib/site";
+
+const heroEyebrowItems = [
+  "Application",
+  siteConfig.targetRole,
+  siteConfig.targetCompany,
+] as const;
 
 export function Hero() {
   return (
@@ -9,9 +16,26 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
-        <p className="mb-8 font-sans text-[0.7rem] tracking-[0.22em] text-foreground-subtle uppercase">
-          Application · {siteConfig.targetRole} · {siteConfig.targetCompany}
-        </p>
+        <div
+          className="mb-8 flex flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
+          aria-label={`Application for ${siteConfig.targetRole} at ${siteConfig.targetCompany}`}
+        >
+          {heroEyebrowItems.map((item, index) => (
+            <Fragment key={item}>
+              {index > 0 ? (
+                <span className="mx-2 hidden md:inline" aria-hidden>
+                  ·
+                </span>
+              ) : null}
+              <span
+                className="hero-eyebrow-line"
+                style={{ animationDelay: `${200 + index * 280}ms` }}
+              >
+                {item}
+              </span>
+            </Fragment>
+          ))}
+        </div>
 
         <h1
           id="hero-heading"
