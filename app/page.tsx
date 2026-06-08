@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main className="w-full max-w-full overflow-x-clip">
         <Hero />
         <WhyThisRole />
         <WhatIBring />

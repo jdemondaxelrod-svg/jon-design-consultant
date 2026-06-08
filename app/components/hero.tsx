@@ -17,7 +17,7 @@ export function Hero() {
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
         <div
-          className="mb-8 flex flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
+          className="mb-8 flex max-w-full flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] break-words text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
           aria-label={`Application for ${siteConfig.targetRole} at ${siteConfig.targetCompany}`}
         >
           {heroEyebrowItems.map((item, index) => (
