@@ -111,6 +111,55 @@ body {
   }
 }
 
+@keyframes heroTickerScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-application-ticker {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+.hero-application-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: heroTickerScroll 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-application-ticker {
+    mask-image: none;
+  }
+
+  .hero-application-ticker-track {
+    width: 100%;
+    justify-content: center;
+    animation: none;
+  }
+
+  .hero-application-ticker-duplicate {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-lead.hero-eyebrow-line {
+    animation-delay: 840ms !important;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

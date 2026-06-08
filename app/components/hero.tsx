@@ -9,9 +9,26 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-[100svh] flex-col justify-center pb-16 pt-28 md:min-h-[90vh] md:justify-end md:pb-28 md:pt-40"
+      className="relative flex min-h-[100svh] flex-col justify-center pb-16 pt-32 md:min-h-[90vh] md:justify-end md:pb-28 md:pt-40"
       aria-labelledby="hero-heading"
     >
+      <div
+        className="hero-application-ticker absolute top-20 right-0 left-0 border-b border-border bg-background-alt py-3 md:hidden"
+        aria-label={heroApplicationLine}
+      >
+        <div className="hero-application-ticker-track">
+          <span className="shrink-0 px-8 font-sans text-[0.65rem] tracking-[0.14em] text-foreground-subtle uppercase">
+            {heroApplicationLine}
+          </span>
+          <span
+            className="hero-application-ticker-duplicate shrink-0 px-8 font-sans text-[0.65rem] tracking-[0.14em] text-foreground-subtle uppercase"
+            aria-hidden
+          >
+            {heroApplicationLine}
+          </span>
+        </div>
+      </div>
+
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
         <div className="hero-intro max-w-4xl">
           <p
@@ -32,15 +49,15 @@ export function Hero() {
         </div>
 
         <p
-          className="hero-eyebrow-line mt-6 max-w-3xl font-sans text-sm leading-relaxed text-foreground-subtle md:mt-8 md:text-[0.95rem]"
+          className="hero-eyebrow-line mt-6 hidden max-w-3xl font-sans text-sm leading-relaxed text-foreground-subtle md:mt-8 md:block md:text-[0.95rem]"
           style={{ animationDelay: "560ms" }}
         >
           {heroApplicationLine}
         </p>
 
         <p
-          className="hero-eyebrow-line mt-6 max-w-3xl font-sans text-base leading-relaxed text-foreground-muted md:mt-8 md:text-lg"
-          style={{ animationDelay: "840ms" }}
+          className="hero-eyebrow-line hero-lead mt-6 max-w-3xl font-sans text-base leading-relaxed text-foreground-muted md:mt-8 md:text-lg"
+          style={{ animationDelay: "560ms" }}
         >
           {heroLead}
         </p>
