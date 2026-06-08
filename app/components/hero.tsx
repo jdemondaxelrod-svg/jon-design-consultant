@@ -12,10 +12,18 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-[90vh] flex-col justify-end pb-20 pt-32 md:pb-28 md:pt-40"
+      className="flex min-h-[100svh] flex-col justify-center pb-16 pt-28 md:min-h-[90vh] md:justify-end md:pb-28 md:pt-40"
       aria-labelledby="hero-heading"
     >
       <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
+        <p
+          id="hero-name"
+          className="hero-eyebrow-line mb-6 font-serif text-[clamp(1.875rem,7vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground md:mb-8"
+          style={{ animationDelay: "0ms" }}
+        >
+          {siteConfig.name}
+        </p>
+
         <div
           className="mb-8 flex max-w-full flex-col gap-1.5 font-sans text-[0.7rem] leading-snug tracking-[0.14em] break-words text-foreground-subtle uppercase md:flex-row md:flex-wrap md:items-center md:gap-0 md:tracking-[0.22em]"
           aria-label={`Application for ${siteConfig.targetRole} at ${siteConfig.targetCompany}`}
@@ -29,7 +37,7 @@ export function Hero() {
               ) : null}
               <span
                 className="hero-eyebrow-line"
-                style={{ animationDelay: `${200 + index * 280}ms` }}
+                style={{ animationDelay: `${350 + index * 280}ms` }}
               >
                 {item}
               </span>
