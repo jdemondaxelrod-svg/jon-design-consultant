@@ -52,7 +52,6 @@ export const resumeExperience: readonly ResumeRole[] = [
     bullets: [
       "Built The Clintonville Handyman from startup through local marketing, customer acquisition, and consultative sales",
       "Built a referral-driven business supported by repeat customers, word-of-mouth recommendations, and 34 five-star reviews",
-      "Served more than 120 homeowners through a documented pipeline of nearly 200 customer opportunities",
       "Scoped, estimated, and delivered more than 500 residential repair, remodeling, accessibility, and home-improvement tasks",
       "Managed projects spanning carpentry, drywall, painting, doors, trim, accessibility modifications, siding, fixtures, plumbing, electrical work, and home diagnostics",
       "Conduct all customer consultations, estimating, scheduling, procurement, project management, invoicing, and business operations",
