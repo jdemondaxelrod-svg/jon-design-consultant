@@ -1,4 +1,5 @@
-import { heroV2, introV2 } from "../../lib/content-v2";
+import { hero } from "../../lib/content";
+import { heroV2 } from "../../lib/content-v2";
 import { siteConfig } from "../../lib/site";
 
 export function HeroV2() {
@@ -35,7 +36,7 @@ export function HeroV2() {
             id="intro"
             className="mt-5 max-w-3xl space-y-5 md:mt-6 md:space-y-6"
           >
-            {introV2.map((paragraph) => (
+            {hero.body.map((paragraph) => (
               <p
                 key={paragraph}
                 className="font-sans text-base leading-relaxed text-foreground-muted md:text-lg"

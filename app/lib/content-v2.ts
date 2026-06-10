@@ -7,18 +7,16 @@ export const heroV2 = {
 export const introV2 = [
   "I'm Jon DeMond-Axelrod, and I'm currently pursuing Residential Design Consultant and Design-Build Consultant opportunities in Columbus, Ohio.",
   "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, and adapt the places they call home.",
-  "That work eventually led me to create The Clintonville Handyman, Éliane Design, and The Karole Foundation—three very different efforts built around a shared interest in homes, accessibility, aging-in-place, and helping people remain safe, independent, and comfortable where they live.",
+  "Through The Clintonville Handyman, Éliane Design, and The Karole Foundation, I've developed a growing interest in design, accessibility, aging-in-place, and helping people create homes that better support the lives they want to live.",
   "Before entering residential services, I spent twenty-five years helping customers make important decisions in education, publishing, technology, and consumer brands. Today, I bring that same consultative approach to helping homeowners navigate important decisions about their homes.",
 ] as const;
 
 export const whyThisWorkV2 = {
   title: "Why This Work",
   paragraphs: [
-    "For most of my career, the setting changed but the work stayed surprisingly consistent.",
-    "I helped professors choose materials for their students. I helped brands connect with customers. I helped digital shoppers find confidence online. And now, through The Clintonville Handyman, I help homeowners make decisions about the places they live.",
-    "That shift has changed how I see the work.",
-    "A home is not just a project. It is where safety, comfort, independence, family, memory, and identity all come together.",
-    "That is why I'm drawn to residential design-build consulting. It brings together the parts of my background that have always mattered most: listening carefully, understanding what people need, helping them see possibilities, and turning those possibilities into practical decisions.",
+    "Today, through The Clintonville Handyman, I help homeowners make decisions about improving, maintaining, and adapting their homes.",
+    "I've worked with first-time homeowners, empty nesters, retirees, growing families, landlords, adult children helping aging parents, and people trying to decide whether to repair, renovate, stay, or move. I've helped people solve small problems, plan larger projects, and think through what they want their homes to do for them in the years ahead.",
+    "In many ways, this is a continuation of the work I've done throughout my career. Earlier, I helped customers navigate ecommerce experiences, brands connect with audiences, and professors choose materials for their students. The industries were different, but the work was often the same: understanding needs, exploring possibilities, navigating tradeoffs, and helping people make important decisions with confidence.",
   ],
 } as const;
 
