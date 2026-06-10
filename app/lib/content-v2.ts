@@ -82,10 +82,10 @@ export const fieldProofV2 = [
       "Homes are systems. Working across many trades and project categories has taught me how the pieces fit together.",
   },
   {
-    value: "34",
-    label: "Five-Star Reviews",
+    value: "5★",
+    label: "Customer Reputation",
     detail:
-      "34 verified five-star reviews. More importantly, homeowners kept calling back.",
+      "A verified five-star average. More importantly, homeowners kept calling back.",
   },
 ] as const;
 

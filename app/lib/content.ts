@@ -69,7 +69,7 @@ export const fieldProof = [
     value: "5★",
     label: "Customer Reputation",
     detail:
-      "34 verified five-star reviews. More importantly, homeowners keep calling back.",
+      "A verified five-star average. More importantly, homeowners keep calling back.",
   },
 ] as const;
 
