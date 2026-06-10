@@ -65,8 +65,9 @@ export const resumeExperience: readonly ResumeRole[] = [
     intro:
       "Nonprofit initiative focused on accessibility, aging-in-place, and home safety.",
     bullets: [
-      "Developed mission, strategic vision, website, and organizational framework",
-      "Developed concepts and initiatives focused on helping individuals remain safe and independent at home",
+      "Founded and launched a nonprofit focused on accessibility, aging-in-place, and home safety, including development of the organization's mission, brand, and website",
+      "Designed programs and service models intended to help individuals remain safe, independent, and comfortable in their homes regardless of income",
+      "Developed advocacy and educational initiatives focused on expanding awareness of home accessibility and reducing the stigma associated with aging-in-place solutions",
     ],
   },
   {
