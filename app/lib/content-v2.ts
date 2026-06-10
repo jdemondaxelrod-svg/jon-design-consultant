@@ -131,21 +131,21 @@ export const experienceSnapshotV2 = [
     title: "Owner",
     period: periods.clintonvilleHandyman,
     mission:
-      "Helping homeowners make informed decisions about repairs, improvements, accessibility, maintenance, and long-term investments in their homes. Built a referral-driven business through trust, consultative problem solving, and a commitment to helping customers understand their options and move forward with confidence.",
+      "Helping homeowners make informed decisions about repairs, improvements, accessibility, maintenance, and long-term investments in their homes.",
   },
   {
     org: "The Karole Foundation",
     title: "Founder",
     period: periods.karoleFoundation,
     mission:
-      "Helping individuals and families navigate decisions related to accessibility, safety, aging-in-place, and independence at home. Focused on making thoughtful home modifications more accessible regardless of income.",
+      "Helping individuals and families navigate decisions related to accessibility, safety, aging-in-place, and independence at home.",
   },
   {
     org: "Éliane Design",
     title: "Founder",
     period: periods.elianeDesign,
     mission:
-      "Helping homeowners explore how accessibility, safety, and independence can be integrated into beautiful residential environments. Developing consultation frameworks that help clients balance design, function, lifestyle, and long-term needs.",
+      "Helping homeowners explore how accessibility, safety, and independence can be integrated into beautiful residential environments.",
   },
   {
     org: "Soft Surroundings",
@@ -179,7 +179,7 @@ export const experienceSnapshotV2 = [
       career.mcgrawHill.end,
     ),
     mission:
-      "Helping professors, departments, and institutions make informed decisions about educational content, technology, and learning resources. Built trusted relationships by understanding needs, presenting options, and supporting confident decision making.",
+      "Helping professors, departments, and institutions make informed decisions about educational content, technology, and learning resources.",
   },
 ] as const;
 

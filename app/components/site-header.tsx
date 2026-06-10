@@ -5,14 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { siteConfig } from "../lib/site";
 
-export type SiteVersion = "v1" | "v2";
-
-type NavItem = {
-  href: string;
-  label: string;
-};
-
-const v1NavItems: NavItem[] = [
+const navItems = [
   { href: "/#intro", label: "Intro" },
   { href: "/#why-this-work", label: "Why This Work" },
   { href: "/#bring", label: "Strengths" },
@@ -24,25 +17,9 @@ const v1NavItems: NavItem[] = [
   { href: "/#contact", label: "Contact" },
 ];
 
-const v2NavItems: NavItem[] = [
-  { href: "/v2#why", label: "Why" },
-  { href: "/v2#bring", label: "Strengths" },
-  { href: "/v2#proof", label: "Proof" },
-  { href: "/v2#homeowner-feedback", label: "Homeowners" },
-  { href: "/v2#experience", label: "Experience" },
-  { href: "/v2#contact", label: "Contact" },
-];
-
-type SiteHeaderProps = {
-  version?: SiteVersion;
-};
-
-export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
+export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const homeHref = version === "v2" ? "/v2" : "/";
-  const resumeHref = version === "v2" ? "/v2#resume" : siteConfig.resumeHref;
-  const navItems = version === "v2" ? v2NavItems : v1NavItems;
 
   useEffect(() => {
     setMenuOpen(false);
@@ -59,7 +36,7 @@ export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur-sm print:hidden">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10 lg:px-16">
         <Link
-          href={homeHref}
+          href="/"
           className="font-serif text-lg tracking-tight text-foreground transition-opacity hover:opacity-70"
         >
           {siteConfig.name}
@@ -82,7 +59,7 @@ export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
 
         <div className="flex items-center gap-4">
           <Link
-            href={resumeHref}
+            href={siteConfig.resumeHref}
             className="hidden font-sans text-[0.65rem] tracking-[0.14em] text-foreground-muted uppercase transition-colors hover:text-foreground lg:inline"
           >
             Resume
@@ -117,40 +94,7 @@ export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
           className="border-t border-border bg-background px-6 py-6 lg:hidden"
           aria-label="Mobile"
         >
-          <p className="font-sans text-[0.65rem] tracking-[0.18em] text-foreground-subtle uppercase">
-            Version
-          </p>
-          <ul className="mt-3 space-y-2">
-            <li>
-              <Link
-                href="/"
-                className={`block py-2 font-sans text-sm ${
-                  version === "v1"
-                    ? "font-medium text-foreground"
-                    : "text-foreground-muted"
-                }`}
-              >
-                Narrative Version / V1
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/v2"
-                className={`block py-2 font-sans text-sm ${
-                  version === "v2"
-                    ? "font-medium text-foreground"
-                    : "text-foreground-muted"
-                }`}
-              >
-                Previous Version / V2
-              </Link>
-            </li>
-          </ul>
-
-          <p className="mt-8 font-sans text-[0.65rem] tracking-[0.18em] text-foreground-subtle uppercase">
-            Sections
-          </p>
-          <ul className="mt-3 space-y-2">
+          <ul className="space-y-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
@@ -164,7 +108,7 @@ export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
             ))}
             <li>
               <Link
-                href={resumeHref}
+                href={siteConfig.resumeHref}
                 className="block py-2 font-sans text-sm text-foreground-muted transition-colors hover:text-foreground"
                 onClick={() => setMenuOpen(false)}
               >
