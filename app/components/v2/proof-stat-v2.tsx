@@ -27,10 +27,10 @@ export function ProofStatV2({
         onClick={() => setExpanded((open) => !open)}
         className="w-full text-left outline-none focus-visible:ring-2 focus-visible:ring-foreground/20 focus-visible:ring-offset-4 focus-visible:ring-offset-background-alt md:pointer-events-none md:cursor-default"
       >
-        <p className="font-serif text-[clamp(2rem,4vw,2.75rem)] leading-none font-medium text-foreground transition-colors group-hover:text-accent">
+        <p className="font-serif text-[clamp(2.25rem,4.5vw,3rem)] leading-none font-medium text-foreground transition-colors group-hover:text-accent">
           {value}
         </p>
-        <p className="mt-3 font-sans text-xs leading-relaxed text-foreground-muted md:text-sm">
+        <p className="mt-1.5 font-sans text-xs leading-snug text-foreground-muted md:text-sm">
           {label}
         </p>
       </button>
