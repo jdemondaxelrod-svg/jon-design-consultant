@@ -153,7 +153,7 @@ export function ResumePageContent({ embedded = false }: ResumePageContentProps) 
           {resumeExperience.map((role) => (
             <ExperienceRole
               key={
-                "positions" in role
+                "positions" in role && role.positions
                   ? `${role.org}-${role.positions.map((p) => p.period).join("-")}`
                   : `${role.org}-${role.title}-${role.period}`
               }
