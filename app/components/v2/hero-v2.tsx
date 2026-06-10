@@ -5,23 +5,46 @@ export function HeroV2() {
   return (
     <section
       id="hero"
-      className="flex min-h-[70svh] flex-col justify-end pb-16 pt-28 md:min-h-[75vh] md:pb-24 md:pt-36"
+      className="flex min-h-[100svh] flex-col pt-24 pb-8 md:min-h-[90vh] md:justify-end md:pb-28 md:pt-40"
       aria-labelledby="hero-heading"
     >
-      <div className="mx-auto w-full max-w-6xl px-6 md:px-10 lg:px-16">
-        <div className="hero-intro max-w-4xl">
-          <p className="font-serif text-[clamp(1.75rem,6vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground">
-            {siteConfig.name}
-          </p>
-          <h1
-            id="hero-heading"
-            className="mt-2 max-w-4xl font-serif text-[clamp(2rem,5vw,3.75rem)] leading-[1.1] font-medium tracking-[-0.02em] text-foreground md:mt-3"
-          >
-            {siteConfig.targetRole}
-          </h1>
-          <p className="mt-4 max-w-2xl font-serif text-[clamp(1.125rem,3.25vw,1.375rem)] leading-relaxed text-foreground-muted md:mt-5">
+      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-between px-6 md:block md:flex-none md:px-10 lg:px-16">
+        <div>
+          <div className="hero-intro max-w-4xl">
+            <p className="font-sans text-[0.7rem] tracking-[0.14em] text-foreground-subtle uppercase md:text-xs">
+              {siteConfig.name}
+            </p>
+            <h1
+              id="hero-heading"
+              className="mt-2 max-w-4xl font-serif text-[clamp(2.25rem,5.5vw,4.25rem)] leading-[1.1] font-medium tracking-[-0.02em] text-foreground md:mt-3"
+            >
+              {siteConfig.targetRole}
+            </h1>
+          </div>
+
+          <div
+            className="my-8 h-px w-full max-w-xl bg-border-strong md:my-14"
+            aria-hidden
+          />
+
+          <p className="max-w-3xl font-serif text-[clamp(1.125rem,3.5vw,1.5rem)] leading-relaxed font-medium tracking-[-0.01em] text-foreground md:text-xl">
             {heroV2.mission}
           </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 gap-4 md:mt-12 md:flex md:flex-wrap">
+          <a
+            href={siteConfig.resumeAnchor}
+            className="inline-flex w-full items-center justify-center border border-foreground/20 bg-foreground px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-background uppercase transition-colors hover:bg-foreground-muted"
+          >
+            View Resume
+          </a>
+          <a
+            href="#contact"
+            className="inline-flex w-full items-center justify-center border border-border-strong px-6 py-3 font-sans text-[0.7rem] tracking-[0.12em] text-foreground uppercase transition-colors hover:border-foreground hover:text-foreground"
+          >
+            Contact Jon
+          </a>
         </div>
       </div>
     </section>
