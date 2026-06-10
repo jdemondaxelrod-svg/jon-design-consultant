@@ -99,7 +99,10 @@ export function ResumePageContent({ embedded = false }: ResumePageContentProps) 
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16 md:px-0 md:py-24 print:max-w-none print:py-0">
-      <header className="border-b border-border-strong pb-10">
+      <header
+        id="resume-header"
+        className="border-b border-border-strong pb-10"
+      >
         <NameTag className="font-serif text-[clamp(2rem,5vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground">
           {resumeHeader.name}
         </NameTag>

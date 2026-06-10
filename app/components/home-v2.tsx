@@ -1,4 +1,5 @@
 import { ResumeSection } from "./resume-section";
+import { ResumeStickyBar } from "./resume-print-button";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { ContactV2 } from "./v2/contact-v2";
@@ -15,7 +16,7 @@ export function HomeV2() {
   return (
     <>
       <SiteHeader />
-      <main className="w-full max-w-full overflow-x-clip">
+      <main className="w-full max-w-full overflow-x-clip pb-24 lg:pb-0">
         <HeroV2 />
         <WhyThisWorkV2 />
         <WhatIBringV2 />
@@ -28,6 +29,7 @@ export function HomeV2() {
         <ResumeSection />
       </main>
       <SiteFooter />
+      <ResumeStickyBar />
     </>
   );
 }
