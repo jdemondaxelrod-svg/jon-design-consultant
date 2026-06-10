@@ -7,7 +7,7 @@ export const hero = {
     "I'm Jon DeMond-Axelrod, and I'm currently pursuing Residential Design Consultant and Design-Build Consultant opportunities in Columbus, Ohio.",
     "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, and adapt the places they call home.",
     "Through The Clintonville Handyman, Éliane Design, and The Karole Foundation, I've developed a growing interest in design, accessibility, aging-in-place, and helping people create homes that better support the lives they want to live.",
-    "Before entering residential services, I spent twenty-five years helping customers make important decisions in education, publishing, technology, and consumer brands. Today, I bring that same consultative approach to helping homeowners navigate important decisions about their homes.",
+    "For more than 25 years, I've helped customers make important decisions across education, publishing, technology, consumer brands, and residential services. Whether helping homeowners, professors, shoppers, or business partners, I've always been drawn to understanding needs, exploring possibilities, building trust, and helping people make confident decisions.",
   ],
 } as const;
 
