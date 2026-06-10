@@ -27,7 +27,11 @@ export function Hero() {
             aria-hidden
           />
 
-          <div className="max-w-3xl space-y-5 md:space-y-6">
+          <p className="max-w-3xl font-serif text-[clamp(1.125rem,3.5vw,1.5rem)] leading-relaxed font-medium tracking-[-0.01em] text-foreground md:text-xl">
+            {hero.headline}
+          </p>
+
+          <div className="mt-5 max-w-3xl space-y-5 md:mt-6 md:space-y-6">
             {hero.body.map((paragraph) => (
               <p
                 key={paragraph}
