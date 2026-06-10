@@ -4,9 +4,10 @@ export const hero = {
   headline:
     "Helping people build the life they want, one home at a time.",
   body: [
-    "I'm Jon DeMond-Axelrod, owner of The Clintonville Handyman and founder of Éliane Design and The Karole Foundation.",
+    "I'm Jon DeMond-Axelrod, and I'm currently pursuing Residential Design Consultant and Design-Build Consultant opportunities in Columbus, Ohio.",
     "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, and adapt the places they call home.",
-    "Before entering residential services, I spent twenty-five years helping customers make important decisions in education, publishing, technology, and consumer brands. I'm interested in bringing that experience—and a genuine appreciation for homes and the people who live in them—to Dave Fox.",
+    "Through The Clintonville Handyman, Éliane Design, and The Karole Foundation, I've developed a growing interest in design, accessibility, aging-in-place, and helping people create homes that better support the lives they want to live.",
+    "Before entering residential services, I spent twenty-five years helping customers make important decisions in education, publishing, technology, and consumer brands. Today, I bring that same consultative approach to helping homeowners navigate important decisions about their homes.",
   ],
 } as const;
 
