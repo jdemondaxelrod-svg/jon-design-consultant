@@ -32,14 +32,30 @@ export const resumeCoreStrengths = [
   "Cross-Functional Leadership",
 ] as const;
 
+export type ResumePosition = {
+  title: string;
+  period: string;
+  bullets: readonly string[];
+};
+
 export type ResumeRole = {
   org: string;
   location: string;
-  title: string;
-  period: string;
   intro?: string;
-  bullets: readonly string[];
-};
+} & (
+  | {
+      title: string;
+      period: string;
+      bullets: readonly string[];
+      positions?: never;
+    }
+  | {
+      positions: readonly ResumePosition[];
+      title?: never;
+      period?: never;
+      bullets?: never;
+    }
+);
 
 export const resumeExperience: readonly ResumeRole[] = [
   {
@@ -134,6 +150,17 @@ export const resumeExperience: readonly ResumeRole[] = [
     ],
   },
   {
+    org: "McGraw-Hill Higher Education",
+    location: "New York, NY",
+    title: "Senior Sales Executive",
+    period: periods.mcgrawHill,
+    bullets: [
+      "Managed a $3.38M sales territory serving colleges and universities",
+      "Delivered 17.7% sales growth and earned Sales Goal Club recognition",
+      "Consulted with faculty and institutions to identify educational and technology solutions",
+    ],
+  },
+  {
     org: "Pearson Education",
     location: "Upper Saddle River, NJ",
     title: "Acquisitions Editor / Product Manager",
@@ -146,33 +173,24 @@ export const resumeExperience: readonly ResumeRole[] = [
     ],
   },
   {
-    org: "McGraw-Hill Higher Education",
-    location: "New York, NY",
-    title: "Senior Sales Executive",
-    period: periods.mcgrawHill,
-    bullets: [
-      "Managed a $3.38M sales territory serving colleges and universities",
-      "Delivered 17.7% sales growth and earned Sales Goal Club recognition",
-      "Consulted with faculty and institutions to identify educational and technology solutions",
-    ],
-  },
-  {
     org: "Prentice Hall",
     location: "Columbus, OH / Austin, TX",
-    title: "Senior Sales Executive",
-    period: periods.prenticeHallOutside,
-    bullets: [],
-  },
-  {
-    org: "Prentice Hall",
-    location: "Columbus, OH / Austin, TX",
-    title: "Inside Sales Executive",
-    period: periods.prenticeHallInside,
-    bullets: [
-      "Managed approximately 100 institutional accounts and 10,000 customer contacts",
-      "Consistently exceeded sales goals and earned Top Performer recognition",
-      "Qualified for Sales Goal Club in 2000, 2001, 2002, and 2003",
-      "Generated $11.6M in cumulative sales while averaging 16.9% annual growth",
+    positions: [
+      {
+        title: "Senior Sales Executive",
+        period: periods.prenticeHallOutside,
+        bullets: [],
+      },
+      {
+        title: "Inside Sales Executive",
+        period: periods.prenticeHallInside,
+        bullets: [
+          "Managed approximately 100 institutional accounts and 10,000 customer contacts",
+          "Consistently exceeded sales goals and earned Top Performer recognition",
+          "Qualified for Sales Goal Club in 2000, 2001, 2002, and 2003",
+          "Generated $11.6M in cumulative sales while averaging 16.9% annual growth",
+        ],
+      },
     ],
   },
 ] as const;

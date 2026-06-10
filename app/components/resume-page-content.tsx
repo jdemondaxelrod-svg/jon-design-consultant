@@ -10,14 +10,30 @@ import { ResumeClosingNote } from "./resume-closing-note";
 import { ResumePrintButton } from "./resume-print-button";
 import { ResumeSectionLabel } from "./resume-section-label";
 
-function ExperienceRole({
-  org,
-  location,
-  title,
-  period,
-  intro,
-  bullets,
-}: (typeof resumeExperience)[number]) {
+function RoleBullets({ bullets }: { bullets: readonly string[] }) {
+  if (bullets.length === 0) return null;
+
+  return (
+    <ul className="mt-4 space-y-2">
+      {bullets.map((bullet) => (
+        <li
+          key={bullet}
+          className="flex gap-3 font-sans text-sm leading-relaxed text-foreground-muted"
+        >
+          <span className="text-accent" aria-hidden>
+            ●
+          </span>
+          <span>{bullet}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function ExperienceRole(role: (typeof resumeExperience)[number]) {
+  const { org, location, intro } = role;
+  const hasPositions = "positions" in role && role.positions;
+
   return (
     <article className="py-8 first:pt-0">
       <div>
@@ -29,35 +45,47 @@ function ExperienceRole({
               | {location}
             </span>
           </p>
-          <p className="shrink-0 font-sans text-sm text-foreground-subtle">
-            {period}
-          </p>
+          {!hasPositions ? (
+            <p className="shrink-0 font-sans text-sm text-foreground-subtle">
+              {role.period}
+            </p>
+          ) : null}
         </div>
         <p className="mt-0.5 font-sans text-sm text-foreground-muted sm:hidden">
           {location}
         </p>
       </div>
-      <p className="mt-1 font-sans text-sm text-foreground-muted">{title}</p>
+
       {intro ? (
         <p className="mt-4 font-sans text-sm leading-relaxed text-foreground-muted">
           {intro}
         </p>
       ) : null}
-      {bullets.length > 0 ? (
-        <ul className="mt-4 space-y-2">
-          {bullets.map((bullet) => (
-            <li
-              key={bullet}
-              className="flex gap-3 font-sans text-sm leading-relaxed text-foreground-muted"
-            >
-              <span className="text-accent" aria-hidden>
-                ●
-              </span>
-              <span>{bullet}</span>
-            </li>
+
+      {hasPositions ? (
+        <div className="mt-3 space-y-5">
+          {role.positions.map((position) => (
+            <div key={`${position.title}-${position.period}`}>
+              <div className="flex items-baseline justify-between gap-3">
+                <p className="font-sans text-sm text-foreground-muted">
+                  {position.title}
+                </p>
+                <p className="shrink-0 font-sans text-sm text-foreground-subtle">
+                  {position.period}
+                </p>
+              </div>
+              <RoleBullets bullets={position.bullets} />
+            </div>
           ))}
-        </ul>
-      ) : null}
+        </div>
+      ) : (
+        <>
+          <p className="mt-1 font-sans text-sm text-foreground-muted">
+            {role.title}
+          </p>
+          <RoleBullets bullets={role.bullets} />
+        </>
+      )}
     </article>
   );
 }
@@ -123,7 +151,14 @@ export function ResumePageContent({ embedded = false }: ResumePageContentProps) 
         <ResumeSectionLabel id="resume-experience">Experience</ResumeSectionLabel>
         <div className="mt-5 divide-y divide-border">
           {resumeExperience.map((role) => (
-            <ExperienceRole key={`${role.org}-${role.title}-${role.period}`} {...role} />
+            <ExperienceRole
+              key={
+                "positions" in role
+                  ? `${role.org}-${role.positions.map((p) => p.period).join("-")}`
+                  : `${role.org}-${role.title}-${role.period}`
+              }
+              {...role}
+            />
           ))}
         </div>
       </section>
