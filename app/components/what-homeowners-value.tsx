@@ -33,14 +33,9 @@ export function WhatHomeownersValue() {
                     : ""
                 }`}
               >
-                <div>
-                  <p className="font-sans text-[0.65rem] tracking-[0.18em] text-foreground-subtle uppercase">
-                    Theme {themeIndex + 1}
-                  </p>
-                  <h3 className="mt-1.5 font-serif text-xl leading-snug text-foreground md:text-[1.35rem]">
-                    {theme.title}
-                  </h3>
-                </div>
+                <h3 className="font-serif text-xl leading-snug text-foreground md:text-[1.35rem]">
+                  {theme.title}
+                </h3>
 
                 <p className="mt-3 max-w-prose font-sans text-sm leading-relaxed text-foreground-muted">
                   {theme.copy}
