@@ -15,8 +15,11 @@ export const whyThisWorkV2 = {
   title: "Why This Work",
   paragraphs: [
     "Today, through The Clintonville Handyman, I help homeowners make decisions about improving, maintaining, and adapting their homes.",
-    "I've worked with first-time homeowners, empty nesters, retirees, growing families, landlords, adult children helping aging parents, and people trying to decide whether to repair, renovate, stay, or move. I've helped people solve small problems, plan larger projects, and think through what they want their homes to do for them in the years ahead.",
-    "In many ways, this is a continuation of the work I've done throughout my career. Earlier, I helped customers navigate ecommerce experiences, brands connect with audiences, and professors choose materials for their students. The industries were different, but the work was often the same: understanding needs, exploring possibilities, navigating tradeoffs, and helping people make important decisions with confidence.",
+    "I've worked with first-time homeowners, empty nesters, retirees, growing families, landlords, adult children helping aging parents, and people trying to decide whether to repair, renovate, stay, or move.",
+    "What I've come to appreciate is that a home is never just a project.",
+    "A home is where safety, comfort, independence, family, memory, and identity all come together. The decisions homeowners make are rarely just about a room, a fixture, or a repair. They are about how people want to live, both today and in the years ahead.",
+    "Over time, I realized that what I enjoy most is not necessarily performing the work itself. It is earning trust, helping people clarify what they want, exploring possibilities, navigating tradeoffs, and helping them make confident decisions.",
+    "That is what draws me to residential design-build consulting. It combines design, customer relationships, communication, planning, and problem solving in a way that feels like a natural extension of the work I've done throughout my career.",
   ],
 } as const;
 
