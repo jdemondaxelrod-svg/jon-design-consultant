@@ -17,7 +17,7 @@ const v1NavItems: NavItem[] = [
   { href: "/#why-this-work", label: "Why This Work" },
   { href: "/#bring", label: "Strengths" },
   { href: "/#proof", label: "Proof" },
-  { href: "/#homeowners-taught", label: "Homeowners" },
+  { href: "/#homeowner-feedback", label: "Homeowners" },
   { href: "/#principles", label: "Inside Homes" },
   { href: "/#experience", label: "Experience" },
   { href: "/#why-we-should-talk", label: "Why Talk" },
