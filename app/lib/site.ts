@@ -20,6 +20,7 @@ export const siteConfig = {
   resumeAnchor: "#resume",
   resumeHref: "/#resume",
   resumeFilename: "Jon-DeMond-Axelrod-Resume.pdf",
+  resumePdfHref: "/api/resume/pdf",
   targetCompany: "Dave Fox Design Build Remodelers",
   targetRole: "Residential Design Consultant",
 } as const;
