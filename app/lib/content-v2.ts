@@ -131,28 +131,28 @@ export const experienceSnapshotV2 = [
     title: "Owner",
     period: periods.clintonvilleHandyman,
     mission:
-      "Built The Clintonville Handyman from startup through local marketing, customer acquisition, and consultative sales. Built a referral-driven business supported by repeat customers, word-of-mouth recommendations, and 34 five-star reviews as owner of a homeowner services business focused on repairs, improvements, accessibility, and practical problem solving.",
+      "Helping homeowners make informed decisions about repairs, improvements, accessibility, maintenance, and long-term investments in their homes. Built a referral-driven business through trust, consultative problem solving, and a commitment to helping customers understand their options and move forward with confidence.",
   },
   {
     org: "The Karole Foundation",
     title: "Founder",
     period: periods.karoleFoundation,
     mission:
-      "Helping people and families make informed decisions about accessibility, safety, and independence at home—regardless of income.",
+      "Helping individuals and families navigate decisions related to accessibility, safety, aging-in-place, and independence at home. Focused on making thoughtful home modifications more accessible regardless of income.",
   },
   {
     org: "Éliane Design",
     title: "Founder",
     period: periods.elianeDesign,
     mission:
-      "Developed a design philosophy centered on integrating accessibility, safety, and independence into beautiful residential environments. Researched luxury residential brands, accessibility products, and aging-in-place solutions to better understand how design and function can coexist. Developed consultation and specification frameworks focused on helping homeowners navigate accessibility and aging-in-place decisions.",
+      "Helping homeowners explore how accessibility, safety, and independence can be integrated into beautiful residential environments. Developing consultation frameworks that help clients balance design, function, lifestyle, and long-term needs.",
   },
   {
     org: "Soft Surroundings",
     title: "Director of Product & Digital Experience",
     period: periods.softSurroundings,
     mission:
-      "Helping customers find clothing that reflected their individuality and personal style by designing online experiences that made shopping feel effortless, inspiring, and confidence-building.",
+      "Helping customers find products that reflected their individuality and personal style by creating digital experiences that made shopping feel effortless, inspiring, and confidence-building.",
   },
   {
     org: "Scotts Miracle-Gro",
@@ -162,13 +162,14 @@ export const experienceSnapshotV2 = [
       career.scottsProductOwner.end,
     ),
     mission:
-      "Helping homeowners turn uncertainty into confidence through education, inspiration, and practical lawn and garden advice.",
+      "Helping homeowners make informed decisions about lawn and garden care through education, inspiration, digital tools, and customer-focused experiences designed to turn uncertainty into confidence.",
   },
   {
     org: "eMusic / 7digital",
     title: "Director, Business Development & Brand Partnerships",
     period: periods.emusic,
-    mission: "Helping brands connect with customers through the power of music.",
+    mission:
+      "Helping brands connect with customers through music, digital experiences, and strategic partnerships. Guided clients through complex marketing decisions while balancing business objectives, customer needs, and creative possibilities.",
   },
   {
     org: "Pearson Education / McGraw-Hill / Prentice Hall",
@@ -178,7 +179,7 @@ export const experienceSnapshotV2 = [
       career.mcgrawHill.end,
     ),
     mission:
-      "Helping professors make confident decisions about the content, technology, and resources they used to support student success.",
+      "Helping professors, departments, and institutions make informed decisions about educational content, technology, and learning resources. Built trusted relationships by understanding needs, presenting options, and supporting confident decision making.",
   },
 ] as const;
 
