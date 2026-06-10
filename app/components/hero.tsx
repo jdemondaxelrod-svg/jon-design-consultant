@@ -11,18 +11,15 @@ export function Hero() {
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-between px-6 md:block md:flex-none md:px-10 lg:px-16">
         <div>
           <div className="hero-intro max-w-4xl">
+            <p className="font-sans text-[0.7rem] tracking-[0.14em] text-foreground-subtle uppercase md:text-xs">
+              {siteConfig.name}
+            </p>
             <h1
               id="hero-heading"
-              className="font-serif text-[clamp(1.875rem,6vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground"
+              className="mt-2 max-w-4xl font-serif text-[clamp(2.25rem,5.5vw,4.25rem)] leading-[1.1] font-medium tracking-[-0.02em] text-foreground md:mt-3"
             >
-              {siteConfig.name}
-            </h1>
-            <h2 className="mt-1 font-sans text-sm font-medium tracking-wide text-foreground-muted md:text-base">
               {siteConfig.targetRole}
-            </h2>
-            <p className="mt-3 max-w-3xl font-serif text-[clamp(1.25rem,4.5vw,2rem)] leading-[1.2] font-medium tracking-[-0.02em] text-foreground md:mt-4">
-              {hero.headline}
-            </p>
+            </h1>
           </div>
 
           <div
