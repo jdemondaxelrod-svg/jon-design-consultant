@@ -20,15 +20,22 @@ function ExperienceRole({
 }: (typeof resumeExperience)[number]) {
   return (
     <article className="py-8 first:pt-0">
-      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-        <p className="font-sans text-sm font-semibold tracking-wide text-foreground uppercase">
-          {org}
-          <span className="font-normal text-foreground-muted">
-            {" "}
-            | {location}
-          </span>
+      <div>
+        <div className="flex items-baseline justify-between gap-3">
+          <p className="font-sans text-sm font-semibold tracking-wide text-foreground uppercase">
+            {org}
+            <span className="hidden font-normal text-foreground-muted sm:inline">
+              {" "}
+              | {location}
+            </span>
+          </p>
+          <p className="shrink-0 font-sans text-sm text-foreground-subtle">
+            {period}
+          </p>
+        </div>
+        <p className="mt-0.5 font-sans text-sm text-foreground-muted sm:hidden">
+          {location}
         </p>
-        <p className="font-sans text-sm text-foreground-subtle">{period}</p>
       </div>
       <p className="mt-1 font-sans text-sm text-foreground-muted">{title}</p>
       {intro ? (
