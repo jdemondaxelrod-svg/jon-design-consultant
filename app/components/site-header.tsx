@@ -13,23 +13,23 @@ type NavItem = {
 };
 
 const v1NavItems: NavItem[] = [
-  { href: "/#why", label: "Why" },
+  { href: "/#intro", label: "Intro" },
+  { href: "/#why-this-work", label: "Why This Work" },
   { href: "/#bring", label: "Strengths" },
   { href: "/#proof", label: "Proof" },
-  { href: "/#homeowner-feedback", label: "Homeowners" },
+  { href: "/#homeowners-taught", label: "Homeowners" },
+  { href: "/#principles", label: "Inside Homes" },
   { href: "/#experience", label: "Experience" },
+  { href: "/#why-we-should-talk", label: "Why Talk" },
   { href: "/#contact", label: "Contact" },
 ];
 
 const v2NavItems: NavItem[] = [
-  { href: "/v2#intro", label: "Intro" },
-  { href: "/v2#why-this-work", label: "Why This Work" },
+  { href: "/v2#why", label: "Why" },
   { href: "/v2#bring", label: "Strengths" },
   { href: "/v2#proof", label: "Proof" },
-  { href: "/v2#homeowners-taught", label: "Homeowners" },
-  { href: "/v2#principles", label: "Inside Homes" },
+  { href: "/v2#homeowner-feedback", label: "Homeowners" },
   { href: "/v2#experience", label: "Experience" },
-  { href: "/v2#why-we-should-talk", label: "Why Talk" },
   { href: "/v2#contact", label: "Contact" },
 ];
 
@@ -130,7 +130,7 @@ export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
                     : "text-foreground-muted"
                 }`}
               >
-                Current Version / V1
+                Narrative Version / V1
               </Link>
             </li>
             <li>
@@ -142,7 +142,7 @@ export function SiteHeader({ version = "v1" }: SiteHeaderProps) {
                     : "text-foreground-muted"
                 }`}
               >
-                Narrative Version / V2
+                Previous Version / V2
               </Link>
             </li>
           </ul>

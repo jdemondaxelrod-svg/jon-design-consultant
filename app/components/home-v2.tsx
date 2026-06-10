@@ -15,7 +15,7 @@ import { WhyWeShouldTalkV2 } from "./v2/why-we-should-talk-v2";
 export function HomeV2() {
   return (
     <>
-      <SiteHeader version="v2" />
+      <SiteHeader version="v1" />
       <main className="w-full max-w-full overflow-x-clip">
         <HeroV2 />
         <IntroV2 />

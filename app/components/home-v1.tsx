@@ -14,7 +14,7 @@ import { WhyThisRole } from "./why-this-role";
 export function HomeV1() {
   return (
     <>
-      <SiteHeader version="v1" />
+      <SiteHeader version="v2" />
       <main className="w-full max-w-full overflow-x-clip">
         <Hero />
         <WhyThisRole />

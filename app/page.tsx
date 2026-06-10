@@ -1,5 +1,5 @@
-import { HomeV1 } from "./components/home-v1";
+import { HomeV2 } from "./components/home-v2";
 
 export default function Home() {
-  return <HomeV1 />;
+  return <HomeV2 />;
 }
