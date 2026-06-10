@@ -4,7 +4,6 @@ import { SiteHeader } from "./site-header";
 import { ContactV2 } from "./v2/contact-v2";
 import { ExperienceSnapshotV2 } from "./v2/experience-snapshot-v2";
 import { HeroV2 } from "./v2/hero-v2";
-import { IntroV2 } from "./v2/intro-v2";
 import { LearnedInsideHomesV2 } from "./v2/learned-inside-homes-v2";
 import { ProofFromFieldV2 } from "./v2/proof-from-field-v2";
 import { WhatHomeownersValue } from "./what-homeowners-value";
@@ -18,7 +17,6 @@ export function HomeV2() {
       <SiteHeader version="v1" />
       <main className="w-full max-w-full overflow-x-clip">
         <HeroV2 />
-        <IntroV2 />
         <WhyThisWorkV2 />
         <WhatIBringV2 />
         <ProofFromFieldV2 />

@@ -1,4 +1,4 @@
-import { heroV2 } from "../../lib/content-v2";
+import { heroV2, introV2 } from "../../lib/content-v2";
 import { siteConfig } from "../../lib/site";
 
 export function HeroV2() {
@@ -30,6 +30,20 @@ export function HeroV2() {
           <p className="max-w-3xl font-serif text-[clamp(1.125rem,3.5vw,1.5rem)] leading-relaxed font-medium tracking-[-0.01em] text-foreground md:text-xl">
             {heroV2.mission}
           </p>
+
+          <div
+            id="intro"
+            className="mt-5 max-w-3xl space-y-5 md:mt-6 md:space-y-6"
+          >
+            {introV2.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="font-sans text-base leading-relaxed text-foreground-muted md:text-lg"
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:mt-12 md:flex md:flex-wrap">
