@@ -10,15 +10,23 @@ export function Hero() {
     >
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col justify-between px-6 md:block md:flex-none md:px-10 lg:px-16">
         <div>
-          <h1
-            id="hero-heading"
-            className="max-w-4xl font-serif text-[clamp(2.25rem,5.5vw,4.25rem)] leading-[1.1] font-medium tracking-[-0.02em] text-foreground"
-          >
-            {hero.headline}
-          </h1>
+          <div className="hero-intro max-w-4xl">
+            <h1
+              id="hero-heading"
+              className="font-serif text-[clamp(1.875rem,6vw,2.5rem)] leading-tight font-medium tracking-[-0.02em] text-foreground"
+            >
+              {siteConfig.name}
+            </h1>
+            <h2 className="mt-1 font-sans text-sm font-medium tracking-wide text-foreground-muted md:text-base">
+              {siteConfig.targetRole}
+            </h2>
+            <p className="mt-3 max-w-3xl font-serif text-[clamp(1.25rem,4.5vw,2rem)] leading-[1.2] font-medium tracking-[-0.02em] text-foreground md:mt-4">
+              {hero.headline}
+            </p>
+          </div>
 
           <div
-            className="my-10 h-px w-full max-w-xl bg-border-strong md:my-14"
+            className="my-8 h-px w-full max-w-xl bg-border-strong md:my-14"
             aria-hidden
           />
 
