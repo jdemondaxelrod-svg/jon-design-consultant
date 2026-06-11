@@ -1,3 +1,4 @@
+import { ResumeClosingNoteProvider } from "../components/resume-closing-note-provider";
 import { ResumePageContent } from "../components/resume-page-content";
 import { ResumeStickyBar } from "../components/resume-print-button";
 import { SiteFooter } from "../components/site-footer";
@@ -16,13 +17,13 @@ function resumeHeaderDescription() {
 
 export default function ResumePage() {
   return (
-    <>
+    <ResumeClosingNoteProvider>
       <SiteHeader />
       <main className="bg-background pt-24 pb-24 print:bg-white print:pt-0 lg:pb-0">
         <ResumePageContent />
       </main>
       <SiteFooter />
       <ResumeStickyBar />
-    </>
+    </ResumeClosingNoteProvider>
   );
 }

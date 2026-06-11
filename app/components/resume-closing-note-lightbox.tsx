@@ -37,7 +37,12 @@ export function ResumeClosingNoteLightbox({
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-background print:hidden">
+    <div
+      className="fixed inset-0 z-[60] flex items-center justify-center bg-background print:hidden"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
       <div
         role="dialog"
         aria-modal="true"

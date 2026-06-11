@@ -2,21 +2,17 @@
 
 import { useEffect, useState } from "react";
 import { siteConfig } from "../lib/site";
-import { ResumeClosingNoteLightbox } from "./resume-closing-note-lightbox";
+import {
+  notifyResumePrintRequested,
+  useResumeClosingNote,
+} from "./resume-closing-note-provider";
 
 type ResumeActionButtonsProps = {
   variant: "inline" | "sticky";
 };
 
 function ResumeActionButtons({ variant }: ResumeActionButtonsProps) {
-  const [showNote, setShowNote] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
-
-  useEffect(() => {
-    const onAfterPrint = () => setShowNote(true);
-    window.addEventListener("afterprint", onAfterPrint);
-    return () => window.removeEventListener("afterprint", onAfterPrint);
-  }, []);
 
   async function handleDownloadResume() {
     setIsDownloading(true);
@@ -59,7 +55,10 @@ function ResumeActionButtons({ variant }: ResumeActionButtonsProps) {
     <>
       <button
         type="button"
-        onClick={() => window.print()}
+        onClick={() => {
+          notifyResumePrintRequested();
+          window.print();
+        }}
         className={primaryButtonClassName}
       >
         Print Resume
@@ -77,20 +76,11 @@ function ResumeActionButtons({ variant }: ResumeActionButtonsProps) {
     </>
   );
 
-  return (
-    <>
-      {variant === "sticky" ? (
-        <div className="flex gap-3">{buttons}</div>
-      ) : (
-        buttons
-      )}
+  if (variant === "sticky") {
+    return <div className="flex gap-3">{buttons}</div>;
+  }
 
-      <ResumeClosingNoteLightbox
-        open={showNote}
-        onClose={() => setShowNote(false)}
-      />
-    </>
-  );
+  return buttons;
 }
 
 export function ResumePrintButton() {
@@ -102,6 +92,7 @@ export function ResumePrintButton() {
 }
 
 export function ResumeStickyBar() {
+  const { isOpen: isClosingNoteOpen } = useResumeClosingNote();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -121,13 +112,15 @@ export function ResumeStickyBar() {
     return () => observer.disconnect();
   }, []);
 
+  const showBar = isVisible && !isClosingNoteOpen;
+
   return (
     <div
       className={`fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 px-4 py-3 backdrop-blur-sm pb-[max(0.75rem,env(safe-area-inset-bottom))] transition-transform duration-300 lg:hidden print:hidden ${
-        isVisible ? "translate-y-0" : "translate-y-full"
+        showBar ? "translate-y-0" : "translate-y-full"
       }`}
       aria-label="Resume actions"
-      aria-hidden={!isVisible}
+      aria-hidden={!showBar}
     >
       <div className="mx-auto max-w-6xl">
         <ResumeActionButtons variant="sticky" />

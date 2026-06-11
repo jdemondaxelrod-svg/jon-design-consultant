@@ -1,3 +1,4 @@
+import { ResumeClosingNoteProvider } from "./resume-closing-note-provider";
 import { ResumeSection } from "./resume-section";
 import { ResumeStickyBar } from "./resume-print-button";
 import { SiteFooter } from "./site-footer";
@@ -14,7 +15,7 @@ import { WhyWeShouldTalkV2 } from "./v2/why-we-should-talk-v2";
 
 export function HomeV2() {
   return (
-    <>
+    <ResumeClosingNoteProvider>
       <SiteHeader />
       <main className="w-full max-w-full overflow-x-clip pb-24 lg:pb-0">
         <HeroV2 />
@@ -30,6 +31,6 @@ export function HomeV2() {
       </main>
       <SiteFooter />
       <ResumeStickyBar />
-    </>
+    </ResumeClosingNoteProvider>
   );
 }
