@@ -7,21 +7,17 @@ export const heroV2 = {
 
 export const introV2 = [
   "I'm Jon DeMond-Axelrod, and I'm currently pursuing Residential Design Consultant and Design-Build Consultant opportunities in Columbus, Ohio.",
-  "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, and adapt the places they call home.",
+  "Over the past several years, I've worked with more than 120 homeowners throughout Central Ohio, helping them improve, maintain, adapt, and reimagine the places they call home.",
   "Through The Clintonville Handyman, Éliane Design, and The Karole Foundation, I've pursued a common mission: helping people improve, adapt, and reimagine their homes—and helping them navigate the decisions that bring those ideas to life.",
-  "For more than 25 years, before bringing that experience into residential services, I helped customers make important decisions across education, publishing, technology, and consumer brands. The settings have changed, but I've always been drawn to understanding needs, exploring possibilities, building trust, and helping people make confident decisions.",
+  "For more than 25 years, before bringing that experience into residential services, I helped customers make important decisions across education, publishing, technology, and consumer brands. The settings have changed, but I've always been drawn to understanding needs, exploring possibilities, building trust, and helping people move forward with confidence.",
 ] as const;
 
 export const whyThisWorkV2 = {
   title: "Why This Work",
   paragraphs: [
-    "Working with homeowners has been a particularly rich and rewarding chapter of my career. Every home, every family, and every project presents a different set of goals, constraints, priorities, and possibilities.",
-    "Today, through The Clintonville Handyman, I help homeowners make decisions about improving, maintaining, and adapting their homes.",
-    "I've worked with first-time homeowners, empty nesters, retirees, growing families, landlords, adult children helping aging parents, and people trying to decide whether to repair, renovate, stay, or move.",
-    "What I've come to appreciate is that a home is never just a project.",
-    "A home is where safety, comfort, independence, family, memory, and identity all come together. The decisions homeowners make are rarely just about a room, a fixture, or a repair. They are about how people want to live, both today and in the years ahead.",
-    "Over time, I realized that what I enjoy most is not necessarily performing the work itself. It is earning trust, helping people clarify what they want, explore possibilities, navigate tradeoffs, and make confident decisions.",
-    "That is what draws me to residential design-build consulting. It combines design, customer relationships, communication, planning, and problem solving in a way that feels like a natural extension of the work I've done throughout my career.",
+    "Working with homeowners has been one of the most rewarding chapters of my career.",
+    "Every project begins with a different combination of goals, constraints, priorities, and possibilities. What I've come to appreciate is that a home is never just a project. Decisions about homes are ultimately decisions about comfort, safety, independence, family, and how people want to live.",
+    "What draws me to residential design-build consulting is the opportunity to help homeowners clarify what they want, explore possibilities, navigate tradeoffs, and move forward with confidence. It brings together the parts of my background I've always enjoyed most: design, communication, problem solving, and helping people make important decisions.",
   ],
 } as const;
 
