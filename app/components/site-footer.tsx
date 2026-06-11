@@ -10,7 +10,7 @@ export function SiteFooter() {
           © {year} {siteConfig.name}
         </p>
         <p className="font-sans text-xs text-foreground-subtle">
-          {siteConfig.location} · {siteConfig.targetCompany}
+          {siteConfig.location}
         </p>
       </div>
     </footer>
