@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Photo Sorter</title>
+    <style>
+      :root {
+        --bg: #faf8f5;
+        --bg-alt: #f3f0eb;
+        --text: #2a2826;
+        --muted: #5c5650;
+        --subtle: #8a837a;
+        --border: #e5e0d8;
+        --border-strong: #d4cdc3;
+        --accent: #2a2826;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .shell {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px 20px 40px;
+      }
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .meta {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .progress {
+        width: 100%;
+        height: 4px;
+        background: var(--border);
+        border-radius: 999px;
+        overflow: hidden;
+        margin-bottom: 24px;
+      }
+
+      .progress > span {
+        display: block;
+        height: 100%;
+        background: var(--accent);
+        transition: width 0.2s ease;
+      }
+
+      .layout {
+        display: grid;
+        gap: 20px;
+      }
+
+      @media (min-width: 900px) {
+        .layout {
+          grid-template-columns: minmax(0, 1fr) 320px;
+          align-items: start;
+        }
+      }
+
+      .viewer {
+        background: var(--bg-alt);
+        border: 1px solid var(--border);
+        min-height: 320px;
+        display: grid;
+        place-items: center;
+        padding: 16px;
+      }
+
+      .viewer img {
+        max-width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+      }
+
+      .empty {
+        text-align: center;
+        color: var(--muted);
+        padding: 48px 20px;
+      }
+
+      .panel {
+        display: grid;
+        gap: 16px;
+      }
+
+      label {
+        display: grid;
+        gap: 6px;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--subtle);
+      }
+
+      input {
+        font: inherit;
+        padding: 10px 12px;
+        border: 1px solid var(--border-strong);
+        background: white;
+        color: var(--text);
+      }
+
+      input:focus {
+        outline: 2px solid var(--border-strong);
+        outline-offset: 1px;
+      }
+
+      .tags {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      button {
+        font: inherit;
+        cursor: pointer;
+        border: 1px solid var(--border-strong);
+        background: white;
+        color: var(--text);
+        padding: 12px 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.72rem;
+        transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      }
+
+      button:hover:not(:disabled) {
+        border-color: var(--accent);
+      }
+
+      button.primary {
+        background: var(--accent);
+        color: white;
+        border-color: var(--accent);
+      }
+
+      button.skip {
+        grid-column: 1 / -1;
+        color: var(--muted);
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .filename {
+        font-size: 0.85rem;
+        color: var(--muted);
+        word-break: break-all;
+      }
+
+      .toast {
+        min-height: 1.2rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .toast.error {
+        color: #8b3a3a;
+      }
+
+      .hint {
+        font-size: 0.75rem;
+        color: var(--subtle);
+        line-height: 1.5;
+      }
+
+      kbd {
+        font: inherit;
+        font-size: 0.7rem;
+        padding: 1px 5px;
+        border: 1px solid var(--border-strong);
+        border-radius: 4px;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <h1>Portfolio Photo Sorter</h1>
+        <p class="meta" id="counts">Loading…</p>
+      </header>
+
+      <div class="progress" aria-hidden="true">
+        <span id="progressBar" style="width: 0%"></span>
+      </div>
+
+      <div class="layout">
+        <section class="viewer" id="viewer">
+          <p class="empty">Loading photo…</p>
+        </section>
+
+        <aside class="panel">
+          <p class="filename" id="filename"></p>
+
+          <label>
+            Project
+            <input
+              id="projectInput"
+              list="projectList"
+              placeholder="e.g. bathroom-remodel"
+              autocomplete="off"
+            />
+            <datalist id="projectList"></datalist>
+          </label>
+
+          <div class="tags">
+            <button type="button" data-tag="hero" class="primary">Hero</button>
+            <button type="button" data-tag="before">Before</button>
+            <button type="button" data-tag="during">During</button>
+            <button type="button" data-tag="after">After</button>
+            <button type="button" data-action="skip" class="skip">Skip</button>
+          </div>
+
+          <p class="toast" id="toast" aria-live="polite"></p>
+
+          <p class="hint">
+            Shortcuts:
+            <kbd>H</kbd> hero,
+            <kbd>B</kbd> before,
+            <kbd>D</kbd> during,
+            <kbd>A</kbd> after,
+            <kbd>S</kbd> skip.
+            Originals stay in your source folder.
+          </p>
+        </aside>
+      </div>
+    </div>
+
+    <script>
+      const viewer = document.getElementById("viewer");
+      const counts = document.getElementById("counts");
+      const progressBar = document.getElementById("progressBar");
+      const filenameEl = document.getElementById("filename");
+      const projectInput = document.getElementById("projectInput");
+      const projectList = document.getElementById("projectList");
+      const toast = document.getElementById("toast");
+      let busy = false;
+      let current = null;
+
+      function setToast(message, isError = false) {
+        toast.textContent = message;
+        toast.classList.toggle("error", isError);
+      }
+
+      function renderProjects(projects) {
+        projectList.innerHTML = "";
+        for (const project of projects) {
+          const option = document.createElement("option");
+          option.value = project;
+          projectList.appendChild(option);
+        }
+      }
+
+      function renderStatus(data) {
+        current = data.current;
+        const done = data.completed;
+        const total = data.total;
+        const pct = total ? Math.round((done / total) * 100) : 100;
+
+        counts.textContent = `${done} of ${total} sorted · ${data.remaining} remaining`;
+        progressBar.style.width = `${pct}%`;
+        renderProjects(data.projects);
+
+        if (!current) {
+          viewer.innerHTML =
+            '<p class="empty">All photos reviewed. Add more to the source folder and refresh.</p>';
+          filenameEl.textContent = "";
+          return;
+        }
+
+        filenameEl.textContent = current.name;
+        viewer.innerHTML = `<img src="${current.previewUrl}" alt="${current.name}" />`;
+      }
+
+      async function refresh() {
+        const response = await fetch("/api/status");
+        const data = await response.json();
+        renderStatus(data);
+      }
+
+      async function submit(action, tag) {
+        if (busy || !current) return;
+
+        if (action !== "skip" && !projectInput.value.trim()) {
+          setToast("Enter a project name first.", true);
+          projectInput.focus();
+          return;
+        }
+
+        busy = true;
+        setToast(action === "skip" ? "Skipping…" : `Copying to ${tag}…`);
+
+        try {
+          const response = await fetch("/api/sort", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              filename: current.name,
+              project: projectInput.value.trim(),
+              tag,
+              action,
+            }),
+          });
+
+          const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data.error || "Request failed");
+          }
+
+          setToast(
+            action === "skip"
+              ? `Skipped ${current.name}`
+              : `Copied to ${data.destination}`
+          );
+          await refresh();
+        } catch (error) {
+          setToast(error.message, true);
+        } finally {
+          busy = false;
+        }
+      }
+
+      document.querySelectorAll("[data-tag]").forEach((button) => {
+        button.addEventListener("click", () => submit("copy", button.dataset.tag));
+      });
+
+      document.querySelector('[data-action="skip"]').addEventListener("click", () =>
+        submit("skip")
+      );
+
+      window.addEventListener("keydown", (event) => {
+        if (event.target === projectInput) return;
+
+        const key = event.key.toLowerCase();
+        const map = {
+          h: "hero",
+          b: "before",
+          d: "during",
+          a: "after",
+        };
+
+        if (map[key]) {
+          event.preventDefault();
+          submit("copy", map[key]);
+        }
+
+        if (key === "s") {
+          event.preventDefault();
+          submit("skip");
+        }
+      });
+
+      refresh();
+    </script>
+  </body>
+</html>
