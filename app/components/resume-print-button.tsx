@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { downloadResumePdf } from "../lib/download-resume";
 import { siteConfig } from "../lib/site";
 import {
   notifyResumePrintRequested,
@@ -18,24 +19,9 @@ function ResumeActionButtons({ variant }: ResumeActionButtonsProps) {
     setIsDownloading(true);
 
     try {
-      const response = await fetch("/api/resume/pdf");
-
-      if (!response.ok) {
-        throw new Error("Failed to generate resume PDF");
-      }
-
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = siteConfig.resumeFilename;
-      link.rel = "noopener";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      URL.revokeObjectURL(url);
+      await downloadResumePdf();
     } catch {
-      window.location.assign("/api/resume/pdf");
+      window.location.assign(siteConfig.resumePdfHref);
     } finally {
       setIsDownloading(false);
     }

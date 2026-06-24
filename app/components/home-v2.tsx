@@ -4,7 +4,7 @@ import { ResumeStickyBar } from "./resume-print-button";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { ContactV2 } from "./v2/contact-v2";
-import { ExperienceSection } from "./v2/experience-section";
+import { ExperienceSnapshotV2 } from "./v2/experience-snapshot-v2";
 import { HeroV2 } from "./v2/hero-v2";
 import { LearnedInsideHomesV2 } from "./v2/learned-inside-homes-v2";
 import { ProofFromFieldV2 } from "./v2/proof-from-field-v2";
@@ -24,7 +24,7 @@ export function HomeV2() {
         <ProofFromFieldV2 />
         <WhatHomeownersValue />
         <LearnedInsideHomesV2 />
-        <ExperienceSection />
+        <ExperienceSnapshotV2 />
         <WhyWeShouldTalkV2 />
         <ContactV2 />
         <ResumeSection />
